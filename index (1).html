@@ -1,3 +1,2423 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Greetings Intermediate Quiz</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    font-family:'Poppins', sans-serif;
+    margin:0;
+    background: linear-gradient(135deg,#74ebd5,#9face6);
+}
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+}
+
+h1{text-align:center;}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:5px 0 10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+/* QUESTION STYLE */
+.question{
+    background:#f8f9ff;
+    padding:15px;
+    margin-bottom:15px;
+    border-left:6px solid #6c63ff;
+    border-radius:10px;
+}
+
+/* CLICKABLE OPTIONS */
+.option{
+    display:block;
+    padding:10px;
+    margin:6px 0;
+    border:2px solid #ddd;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.2s;
+    background:white;
+}
+
+.option:hover{
+    border-color:#6c63ff;
+    transform:scale(1.02);
+}
+
+.option.selected{
+    background:#6c63ff;
+    color:white;
+    border-color:#6c63ff;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#6c63ff;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* RESULT */
+.result{
+    margin-top:15px;
+    padding:15px;
+    background:#eaffea;
+    border-left:6px solid #2ecc71;
+    border-radius:10px;
+}
+
+/* POPUP */
+#popup{
+    display:none;
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-content{
+    background:white;
+    padding:20px;
+    width:85%;
+    max-width:650px;
+    border-radius:12px;
+    max-height:80%;
+    overflow-y:auto;
+}
+
+.close-btn{
+    background:red;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    float:right;
+    border-radius:8px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌟 Greetings Intermediate Quiz</h1>
+
+<input id="name" placeholder="Name">
+<input id="class" placeholder="Class">
+
+<!-- QUESTIONS -->
+
+<div class="question">
+1. When a business associate greets you with "How do you do?", what is culturally considered the most appropriate formal response?
+<div class="option" onclick="selectAnswer('q1','a',this)">A. I'm doing great, thanks for asking!</div>
+<div class="option" onclick="selectAnswer('q1','b',this)">B. How do you do?</div>
+<div class="option" onclick="selectAnswer('q1','c',this)">C. I am a manager at my firm.</div>
+<div class="option" onclick="selectAnswer('q1','d',this)">D. Not much, what about you?</div>
+</div>
+
+<div class="question">
+2. If a colleague greets you casually by asking, "How's tricks?", what are they inquiring about?
+<div class="option" onclick="selectAnswer('q2','a',this)">A. Your favorite card game or magic tricks</div>
+<div class="option" onclick="selectAnswer('q2','b',this)">B. How your day or general life is going</div>
+<div class="option" onclick="selectAnswer('q2','c',this)">C. Technical errors with office equipment</div>
+<div class="option" onclick="selectAnswer('q2','d',this)">D. A request for a favor</div>
+</div>
+
+<div class="question">
+3. Which phrase is an idiomatic equivalent to "Long time no see" but carries a slightly warmer, more expressive tone?
+<div class="option" onclick="selectAnswer('q3','a',this)">A. It's been an absolute age!</div>
+<div class="option" onclick="selectAnswer('q3','b',this)">B. Goodbye for now.</div>
+<div class="option" onclick="selectAnswer('q3','c',this)">C. Pleased to make your acquaintance.</div>
+<div class="option" onclick="selectAnswer('q3','d',this)">D. Speak of the devil.</div>
+</div>
+
+<div class="question">
+4. Someone greets you in passing with "Alright?". What is the most appropriate native-like reaction?
+<div class="option" onclick="selectAnswer('q4','a',this)">A. No, I am experiencing several problems.</div>
+<div class="option" onclick="selectAnswer('q4','b',this)">B. Nod and say "Yeah, alright?" right back.</div>
+<div class="option" onclick="selectAnswer('q4','c',this)">C. Stand still and explain your evening schedule.</div>
+<div class="option" onclick="selectAnswer('q4','d',this)">D. Say "Thank you very much."</div>
+</div>
+
+<div class="question">
+5. In a formal networking environment, which phrase works best to transition from a greeting into explaining your purpose?
+<div class="option" onclick="selectAnswer('q5','a',this)">A. Yo, let's cut right to the chase.</div>
+<div class="option" onclick="selectAnswer('q5','b',this)">B. It’s a pleasure to connect with you. I wanted to follow up on...</div>
+<div class="option" onclick="selectAnswer('q5','c',this)">C. What's new with you? Listen to this...</div>
+<div class="option" onclick="selectAnswer('q5','d',this)">D. How's life treating you? Anyway...</div>
+</div>
+
+<div class="question">
+6. What does the greeting phrase "How are you holding up?" implicitly indicate?
+<div class="option" onclick="selectAnswer('q6','a',this)">A. The speaker wants to know if you can lift something heavy.</div>
+<div class="option" onclick="selectAnswer('q6','b',this)">B. The speaker knows you've been going through a difficult situation.</div>
+<div class="option" onclick="selectAnswer('q6','c',this)">C. The speaker is greeting a complete stranger.</div>
+<div class="option" onclick="selectAnswer('q6','d',this)">D. The speaker wants to know your financial standing.</div>
+</div>
+
+<div class="question">
+7. If someone says "It’s wonderful to finally see you in the flesh!", what does it mean?
+<div class="option" onclick="selectAnswer('q7','a',this)">A. They are meeting you in person after only communicating online.</div>
+<div class="option" onclick="selectAnswer('q7','b',this)">B. They are making a comment about your clothing choices.</div>
+<div class="option" onclick="selectAnswer('q7','c',this)">C. They think you look very tired or unhealthy.</div>
+<div class="option" onclick="selectAnswer('q7','d',this)">D. They are angry that you arrived late.</div>
+</div>
+
+<div class="question">
+8. Select the phrase that represents a highly professional, respectful greeting for a formal cover letter:
+<div class="option" onclick="selectAnswer('q8','a',this)">A. To Whom It May Concern</div>
+<div class="option" onclick="selectAnswer('q8','b',this)">B. Hey Hiring Team</div>
+<div class="option" onclick="selectAnswer('q8','c',this)">C. Dear Hiring Manager</div>
+<div class="option" onclick="selectAnswer('q8','d',this)">D. Yo! Good morning</div>
+</div>
+
+<div class="question">
+9. What is the most natural reply to the casual greeting phrase "What have you been up to?"
+<div class="option" onclick="selectAnswer('q9','a',this)">A. Yes, I have been up there.</div>
+<div class="option" onclick="selectAnswer('q9','b',this)">B. Just the usual, keeping busy with work.</div>
+<div class="option" onclick="selectAnswer('q9','c',this)">C. I am 175 centimeters tall.</div>
+<div class="option" onclick="selectAnswer('q9','d',this)">D. Fine, thank you, and you?</div>
+</div>
+
+<div class="question">
+10. Which option represents a polite way to greet an unexpected guest while expressing pleasant surprise?
+<div class="option" onclick="selectAnswer('q10','a',this)">A. What brings you here? Explain yourself.</div>
+<div class="option" onclick="selectAnswer('q10','b',this)">B. What a pleasant surprise! Come on in.</div>
+<div class="option" onclick="selectAnswer('q10','c',this)">C. I wasn't expecting you at all today.</div>
+<div class="option" onclick="selectAnswer('q10','d',this)">D. Hello, why didn't you text me first?</div>
+</div>
+
+<div class="question">
+11. If a business client starts an email with "I hope this email finds you well," what type of greeting style is it?
+<div class="option" onclick="selectAnswer('q11','a',this)">A. Archaic and completely incorrect</div>
+<div class="option" onclick="selectAnswer('q11','b',this)">B. Standard, courteous corporate correspondence etiquette</div>
+<div class="option" onclick="selectAnswer('q11','c',this)">C. Highly casual and intended only for close friends</div>
+<div class="option" onclick="selectAnswer('q11','d',this)">D. Urgent and demanding a quick reply</div>
+</div>
+
+<div class="question">
+12. When someone leaves a party and says, "Give my best to your family," what are they doing?
+<div class="option" onclick="selectAnswer('q12','a',this)">A. Giving you a financial gift for your household</div>
+<div class="option" onclick="selectAnswer('q12','b',this)">B. Requesting that you send their warm regards and greetings to them</div>
+<div class="option" onclick="selectAnswer('q12','c',this)">C. Asking to borrow a family member's vehicle</div>
+<div class="option" onclick="selectAnswer('q12','d',this)">D. Complaining about the behavior of your family</div>
+</div>
+
+<div class="question">
+13. Which response works best when someone greets you with "Nice to see you" if you have already met them previously?
+<div class="option" onclick="selectAnswer('q13','a',this)">A. Nice to meet you too.</div>
+<div class="option" onclick="selectAnswer('q13','b',this)">B. Great to see you again too!</div>
+<div class="option" onclick="selectAnswer('q13','c',this)">C. Who are you exactly?</div>
+<div class="option" onclick="selectAnswer('q13','d',this)">D. Same here, stranger.</div>
+</div>
+
+<div class="question">
+14. What does the idiomatic parting greeting "Take care" communicate?
+<div class="option" onclick="selectAnswer('q14','a',this)">A. A warning about an immediate physical hazard nearby</div>
+<div class="option" onclick="selectAnswer('q14','b',this)">B. A warm, well-wishing farewell indicating safety and health</div>
+<div class="option" onclick="selectAnswer('q14','c',this)">C. A strict instruction to guard personal belongings</div>
+<div class="option" onclick="selectAnswer('q14','d',this)">D. An invitation to look after someone else's children</div>
+</div>
+
+<div class="question">
+15. If a business meeting is wrapping up, which expression is most professional to use as a closing statement?
+<div class="option" onclick="selectAnswer('q15','a',this)">A. Alright, I'm out of here. Catch you later.</div>
+<div class="option" onclick="selectAnswer('q15','b',this)">B. Thank you all for your time today. I look forward to our next steps.</div>
+<div class="option" onclick="selectAnswer('q15','c',this)">C. Bye, don't forget to send me money.</div>
+<div class="option" onclick="selectAnswer('q15','d',this)">D. Peace out, guys. Have fun.</div>
+</div>
+
+<button onclick="submitQuiz()">Submit Quiz</button>
+
+<div class="result" id="result"></div>
+
+<h2>🏆 Leaderboard</h2>
+<table border="1" width="100%">
+<tr>
+<th>Rank</th>
+<th>Name</th>
+<th>Class</th>
+<th>Score</th>
+<th>Time</th>
+</tr>
+<tbody id="ranking"></tbody>
+</table>
+
+</div>
+
+<!-- POPUP -->
+<div id="popup">
+<div class="popup-content">
+<button class="close-btn" onclick="closePopup()">X</button>
+<h2>📘 Explanations</h2>
+<div id="explanations"></div>
+</div>
+</div>
+
+<script>
+
+// ANSWERS
+const answers = {
+q1:"b", q2:"b", q3:"a", q4:"b", q5:"b",
+q6:"b", q7:"a", q8:"c", q9:"b", q10:"b",
+q11:"b", q12:"b", q13:"b", q14:"b", q15:"b"
+};
+
+// EXPLANATIONS
+const explanations = {
+q1:"'How do you do?' is an idiomatic formulaic phrase, not a literal question. The correct ritualistic reply is to repeat 'How do you do?'.",
+q2:"'How's tricks?' is an idiomatic expression that simply means 'how are things going?' or 'how are you?'.",
+q3:"'It's been an absolute age' implies a dramatic, friendly emphasis on a long period of separation.",
+q4:"In regions like the UK, 'Alright?' acts as a passing acknowledgement. Repeating it back or giving a quick nod is standard practice.",
+q5:"This choice establishes immediate professional politeness before addressing business details directly.",
+q6:"'Holding up' refers to coping with a stressful context, making it empathetic and supportive.",
+q7:"'In the flesh' means meeting physically in real life, rather than looking at a screen or profile.",
+q8:"While 'To Whom It May Concern' is acceptable, modern business writing favors targeting a specific professional designation like 'Dear Hiring Manager'.",
+q9:"'What have you been up to?' looks for a summary of recent life/work activities, making a casual summary the perfect response.",
+q10:"Expressing 'What a pleasant surprise!' sounds warm and welcoming to unannounced guests.",
+q11:"This sentence is an incredibly standard, courteous open-phrase common in traditional business correspondence.",
+q12:"'Give my best' is an idiom used to send kind thoughts and respectful regards to people who aren't present.",
+q13:"Using 'Nice to meet you' for a second meeting is a major faux-pas; 'Great to see you again' acknowledges your shared history perfectly.",
+q14:"'Take care' is a warm parting phrase that wishes safety and physical well-being to the listener.",
+q15:"This sentence summarizes closing corporate decorum perfectly, highlighting gratitude and structured future steps."
+};
+
+// SELECTED ANSWERS
+let selectedAnswers = {};
+
+function selectAnswer(q, ans, el){
+
+selectedAnswers[q] = ans;
+
+let options = el.parentNode.querySelectorAll(".option");
+options.forEach(o => o.classList.remove("selected"));
+
+el.classList.add("selected");
+}
+
+// SOUND
+const correctSound = new Audio("https://www.soundjay.com/buttons/sounds/button-4.mp3");
+const wrongSound = new Audio("https://www.soundjay.com/buttons/sounds/button-10.mp3");
+
+function submitQuiz(){
+
+let name = document.getElementById("name").value;
+let cls = document.getElementById("class").value;
+
+if (!name || !cls) {
+    alert("Please fill in your Name and Class before submitting!");
+    return;
+}
+
+let score = 0;
+let output = "";
+
+for(let i=1;i<=15;i++){
+
+if(selectedAnswers["q"+i] === answers["q"+i]){
+score++;
+correctSound.play();
+output += `<p>✔ Q${i}: Correct - ${explanations["q"+i]}</p>`;
+}else{
+wrongSound.play();
+output += `<p>❌ Q${i}: Wrong - ${explanations["q"+i]}</p>`;
+}
+}
+
+let time = new Date().toLocaleString();
+
+// SAVE RANKING LOKAL
+let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
+ranking.push({name, class:cls, score, time});
+localStorage.setItem("ranking", JSON.stringify(ranking));
+
+loadRanking();
+
+// UPDATE TAMPILAN RESULT OUT OF 15
+document.getElementById("result").innerHTML = `
+<h3>🎯 Result</h3>
+Name: ${name}<br>
+Class: ${cls}<br>
+Score: ${score}/15<br>
+Time: ${time}<br>
+<span id="save-status" style="color: #f39c12; font-weight: bold; margin-top:10px; display:inline-block;">🔄 Saving to Server/Excel...</span>
+`;
+
+showPopup(output);
+
+// SEND TO GOOGLE SHEETS API
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxNy0INk-z1jDesKlPZhfWD-5H30Pd0BGPcgcXZ99vBcPbFByPt5x21YTyjnKvWpz4s/exec";
+
+let dataToSave = {
+    quizType: "greetings",
+    name: name,
+    class: cls,
+    score: score,
+    time: time
+};
+
+fetch(SCRIPT_URL, {
+    method: "POST",
+    headers: {
+        "Content-Type": "text/plain"
+    },
+    body: JSON.stringify(dataToSave)
+})
+.then(response => response.json())
+.then(data => {
+    let statusEl = document.getElementById("save-status");
+    if(data.result === "success") {
+        statusEl.innerHTML = "✔️ Saved to Excel successfully!";
+        statusEl.style.color = "#2ecc71";
+    } else {
+        statusEl.innerHTML = "❌ Failed to save to Excel.";
+        statusEl.style.color = "red";
+    }
+})
+.catch(error => {
+    let statusEl = document.getElementById("save-status");
+    statusEl.innerHTML = "❌ Error connecting to server.";
+    statusEl.style.color = "red";
+    console.error("Fetch error:", error);
+});
+}
+
+// LEADERBOARD
+function loadRanking(){
+let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
+ranking.sort((a,b)=>b.score - a.score);
+
+let table = document.getElementById("ranking");
+table.innerHTML = "";
+
+ranking.forEach((r,index)=>{
+
+let badge = "";
+if(index===0) badge="🥇 GOLD";
+else if(index===1) badge="🥈 SILVER";
+else if(index===2) badge="🥉 BRONZE";
+else badge="—";
+
+table.innerHTML += `
+<tr>
+<td>${badge}</td>
+<td>${r.name}</td>
+<td>${r.class}</td>
+<td>${r.score}</td>
+<td>${r.time}</td>
+</tr>`;
+});
+}
+
+function showPopup(html){
+document.getElementById("explanations").innerHTML = html;
+document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup(){
+document.getElementById("popup").style.display = "none";
+}
+
+loadRanking();
+
+</script>
+
+</body>
+</html>
+not with code, change the question first
+
+Here is the list of 15 Intermediate-Level Greetings Questions along with their options, correct answers, and explanations so you can review them before putting them into any code:
+
+1. Professional Reciprocity
+Question: When a business associate greets you with "How do you do?", what is culturally considered the most appropriate formal response?
+
+A. I'm doing great, thanks for asking!
+
+B. How do you do? (Correct)
+
+C. I am a manager at my firm.
+
+D. Not much, what about you?
+
+Explanation: "How do you do?" is a formulaic ritual, not a literal question. The correct formal response is simply to repeat the phrase back to them.
+
+2. Casual Idioms
+Question: If a colleague greets you casually by asking, "How's tricks?", what are they inquiring about?
+
+A. Your favorite card game or magic tricks
+
+B. How your day or general life is going (Correct)
+
+C. Technical errors with office equipment
+
+D. A request for a favor
+
+Explanation: "How's tricks?" is an old-school, friendly idiom that simply means "How are things going?" or "How are you?".
+
+3. Expressive Separation
+Question: Which phrase is an idiomatic equivalent to "Long time no see" but carries a slightly warmer, more expressive tone?
+
+A. It's been an absolute age! (Correct)
+
+B. Goodbye for now.
+
+C. Pleased to make your acquaintance.
+
+D. Speak of the devil.
+
+Explanation: "It's been an absolute age" adds a dramatic, warm emphasis on how long it has been since you last saw the person.
+
+4. Passing Acknowledgement
+Question: Someone greets you in passing with "Alright?". What is the most appropriate native-like reaction?
+
+A. No, I am experiencing several problems.
+
+B. Nod and say "Yeah, alright?" right back. (Correct)
+
+C. Stand still and explain your evening schedule.
+
+D. Say "Thank you very much."
+
+Explanation: In regions like the UK, "Alright?" functions as a passing acknowledgment rather than an invitation to chat. Giving a quick nod and repeating it back is the standard response.
+
+5. Formal Transition
+Question: In a formal networking environment, which phrase works best to transition from a greeting into explaining your purpose?
+
+A. Yo, let's cut right to the chase.
+
+B. It’s a pleasure to connect with you. I wanted to follow up on... (Correct)
+
+C. What's new with you? Listen to this...
+
+D. How's life treating you? Anyway...
+
+Explanation: This phrase establishes polite, corporate rapport before transitioning into business details smoothly.
+
+6. Empathetic Greetings
+Question: What does the greeting phrase "How are you holding up?" implicitly indicate?
+
+A. The speaker wants to know if you can lift something heavy.
+
+B. The speaker knows you've been going through a difficult situation. (Correct)
+
+C. The speaker is greeting a complete stranger.
+
+D. The speaker wants to know your financial standing.
+
+Explanation: To "hold up" refers to surviving or coping with stress, grief, or a tough period, making this an empathetic greeting.
+
+7. Transitioning to Reality
+Question: If someone says "It’s wonderful to finally see you in the flesh!", what does it mean?
+
+A. They are meeting you in person after only communicating online. (Correct)
+
+B. They are making a comment about your clothing choices.
+
+C. They think you look very tired or unhealthy.
+
+D. They are angry that you arrived late.
+
+Explanation: "In the flesh" means meeting physically in real life, typically after interacting strictly via email or video calls.
+
+8. Written Correspondence
+Question: Select the phrase that represents a highly professional, respectful greeting for a formal cover letter where the recipient's name is unknown:
+
+A. To Whom It May Concern
+
+B. Hey Hiring Team
+
+C. Dear Hiring Manager (Correct)
+
+D. Yo! Good morning
+
+Explanation: While "To Whom It May Concern" is okay, modern professional writing prefers targeting a specific title, making "Dear Hiring Manager" the best fit.
+
+9. General Updates
+Question: What is the most natural reply to the casual greeting phrase "What have you been up to?"
+
+A. Yes, I have been up there.
+
+B. Just the usual, keeping busy with work. (Correct)
+
+C. I am 175 centimeters tall.
+
+D. Fine, thank you, and you?
+
+Explanation: "What have you been up to?" asks for a summary of your recent activities, so sharing a brief update about work or life is appropriate.
+
+10. Welcoming Surprises
+Question: Which option represents a polite way to greet an unexpected guest while expressing pleasant surprise?
+
+A. What brings you here? Explain yourself.
+
+B. What a pleasant surprise! Come on in. (Correct)
+
+C. I wasn't expecting you at all today.
+
+D. Hello, why didn't you text me first?
+
+Explanation: "What a pleasant surprise!" immediately frames their unannounced arrival as a positive event.
+
+11. Email Etiquette
+Question: If a business client starts an email with "I hope this email finds you well," what type of tone does this set?
+
+A. Archaic and completely incorrect
+
+B. Standard, courteous corporate correspondence (Correct)
+
+C. Highly casual and intended only for close friends
+
+D. Urgent and demanding a quick reply
+
+Explanation: This phrase is an industry-standard, polite introductory formula used in professional emails.
+
+12. Parting Regards
+Question: When someone leaves a gathering and says, "Give my best to your family," what are they requesting?
+
+A. A financial gift for their household
+
+B. That you pass on their warm regards and greetings to them (Correct)
+
+C. To borrow a family member's vehicle
+
+D. To complain about the behavior of your family
+
+Explanation: "Give my best to..." is an idiom used to send kind thoughts and greetings to loved ones who are not present.
+
+13. Avoiding Social Blunders
+Question: Which response works best when someone greets you with "Nice to see you" if you have already met them previously?
+
+A. Nice to meet you too.
+
+B. Great to see you again too! (Correct)
+
+C. Who are you exactly?
+
+D. Same here, stranger.
+
+Explanation: Saying "Nice to meet you" to someone you already know implies you forgot them. "Great to see you again" perfectly validates your shared history.
+
+14. Well-Wishing Farewell
+Question: What does the common parting greeting "Take care" communicate?
+
+A. A warning about an immediate physical hazard nearby
+
+B. A warm, well-wishing farewell indicating safety and health (Correct)
+
+C. A strict instruction to guard personal belongings
+
+D. An invitation to look after someone else's children
+
+Explanation: "Take care" is a gentle, warm way of closing a conversation by wishing someone safety and physical well-being.
+
+15. Corporate Closures
+Question: If a business meeting is wrapping up, which expression is most professional to use as a closing statement?
+
+A. Alright, I'm out of here. Catch you later.
+
+B. Thank you all for your time today. I look forward to our next steps. (Correct)
+
+C. Bye, don't forget to send me money.
+
+D. Peace out, guys. Have fun.
+
+Explanation: This closing shows appreciation for the participants' time and sets a collaborative expectation for the future.
+
+Let me know if you would like me to adjust the difficulty of any specific questions or options before we generate the final code block!
+
+make it in multiple choice format
+
+Here is the complete set of 15 Intermediate-Level Greetings Questions formatted clearly as a standard multiple-choice quiz.
+
+Greetings Intermediate Quiz (Questions List)
+1. When a business associate greets you with "How do you do?", what is culturally considered the most appropriate formal response?
+
+A) I'm doing great, thanks for asking!
+
+B) How do you do?
+
+C) I am a manager at my firm.
+
+D) Not much, what about you?
+
+Answer: B
+
+2. If a colleague greets you casually by asking, "How's tricks?", what are they inquiring about?
+
+A) Your favorite card game or magic tricks
+
+B) How your day or general life is going
+
+C) Technical errors with office equipment
+
+D) A request for a favor
+
+Answer: B
+
+3. Which phrase is an idiomatic equivalent to "Long time no see" but carries a slightly warmer, more expressive tone?
+
+A) It's been an absolute age!
+
+B) Goodbye for now.
+
+C) Pleased to make your acquaintance.
+
+D) Speak of the devil.
+
+Answer: A
+
+4. Someone greets you in passing with "Alright?". What is the most appropriate native-like reaction?
+
+A) No, I am experiencing several problems.
+
+B) Nod and say "Yeah, alright?" right back.
+
+C) Stand still and explain your evening schedule.
+
+D) Say "Thank you very much."
+
+Answer: B
+
+5. In a formal networking environment, which phrase works best to transition from a greeting into explaining your purpose?
+
+A) Yo, let's cut right to the chase.
+
+B) It’s a pleasure to connect with you. I wanted to follow up on...
+
+C) What's new with you? Listen to this...
+
+D) How's life treating you? Anyway...
+
+Answer: B
+
+6. What does the greeting phrase "How are you holding up?" implicitly indicate?
+
+A) The speaker wants to know if you can lift something heavy.
+
+B) The speaker knows you've been going through a difficult situation.
+
+C) The speaker is greeting a complete stranger.
+
+D) The speaker wants to know your financial standing.
+
+Answer: B
+
+7. If someone says "It’s wonderful to finally see you in the flesh!", what does it mean?
+
+A) They are meeting you in person after only communicating online.
+
+B) They are making a comment about your clothing choices.
+
+C) They think you look very tired or unhealthy.
+
+D) They are angry that you arrived late.
+
+Answer: A
+
+8. Select the phrase that represents a highly professional, respectful greeting for a formal cover letter where the recipient's name is unknown:
+
+A) To Whom It May Concern
+
+B) Hey Hiring Team
+
+C) Dear Hiring Manager
+
+D) Yo! Good morning
+
+Answer: C
+
+9. What is the most natural reply to the casual greeting phrase "What have you been up to?"
+
+A) Yes, I have been up there.
+
+B) Just the usual, keeping busy with work.
+
+C) I am 175 centimeters tall.
+
+D) Fine, thank you, and you?
+
+Answer: B
+
+10. Which option represents a polite way to greet an unexpected guest while expressing pleasant surprise?
+
+A) What brings you here? Explain yourself.
+
+B) What a pleasant surprise! Come on in.
+
+C) I wasn't expecting you at all today.
+
+D) Hello, why didn't you text me first?
+
+Answer: B
+
+11. If a business client starts an email with "I hope this email finds you well," what type of tone does this set?
+
+A) Archaic and completely incorrect
+
+B) Standard, courteous corporate correspondence
+
+C) Highly casual and intended only for close friends
+
+D) Urgent and demanding a quick reply
+
+Answer: B
+
+12. When someone leaves a gathering and says, "Give my best to your family," what are they requesting?
+
+A) A financial gift for their household
+
+B) That you pass on their warm regards and greetings to them
+
+C) To borrow a family member's vehicle
+
+D) To complain about the behavior of your family
+
+Answer: B
+
+13. Which response works best when someone greets you with "Nice to see you" if you have already met them previously?
+
+A) Nice to meet you too.
+
+B) Great to see you again too!
+
+C) Who are you exactly?
+
+D) Same here, stranger.
+
+Answer: B
+
+14. What does the common parting greeting "Take care" communicate?
+
+A) A warning about an immediate physical hazard nearby
+
+B) A warm, well-wishing farewell indicating safety and health
+
+C) A strict instruction to guard personal belongings
+
+D) An invitation to look after someone else's children
+
+Answer: B
+
+15. If a business meeting is wrapping up, which expression is most professional to use as a closing statement?
+
+A) Alright, I'm out of here. Catch you later.
+
+B) Thank you all for your time today. I look forward to our next steps.
+
+C) Bye, don't forget to send me money.
+
+D) Peace out, guys. Have fun.
+
+Answer: B
+
+Once you are completely happy with these choices, just say the word and I will pack them right back into your index.html structure!
+
+change it into a code
+
+Here is the fully complete index.html code with the 15 intermediate-level multiple-choice questions integrated.
+
+All of your Google Sheets routing (quizType: "greetings"), audio sounds, pop-up explanations, and the leaderboard have been kept perfectly intact.
+
+HTML
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Greetings Intermediate Quiz</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    font-family:'Poppins', sans-serif;
+    margin:0;
+    background: linear-gradient(135deg,#74ebd5,#9face6);
+}
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+}
+
+h1{text-align:center;}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:5px 0 10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+/* QUESTION STYLE */
+.question{
+    background:#f8f9ff;
+    padding:15px;
+    margin-bottom:15px;
+    border-left:6px solid #6c63ff;
+    border-radius:10px;
+}
+
+/* CLICKABLE OPTIONS */
+.option{
+    display:block;
+    padding:10px;
+    margin:6px 0;
+    border:2px solid #ddd;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.2s;
+    background:white;
+}
+
+.option:hover{
+    border-color:#6c63ff;
+    transform:scale(1.02);
+}
+
+.option.selected{
+    background:#6c63ff;
+    color:white;
+    border-color:#6c63ff;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#6c63ff;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* RESULT */
+.result{
+    margin-top:15px;
+    padding:15px;
+    background:#eaffea;
+    border-left:6px solid #2ecc71;
+    border-radius:10px;
+}
+
+/* POPUP */
+#popup{
+    display:none;
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-content{
+    background:white;
+    padding:20px;
+    width:85%;
+    max-width:650px;
+    border-radius:12px;
+    max-height:80%;
+    overflow-y:auto;
+}
+
+.close-btn{
+    background:red;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    float:right;
+    border-radius:8px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌟 Greetings Intermediate Quiz</h1>
+
+<input id="name" placeholder="Name">
+<input id="class" placeholder="Class">
+
+<!-- QUESTIONS -->
+
+<div class="question">
+1. When a business associate greets you with "How do you do?", what is culturally considered the most appropriate formal response?
+<div class="option" onclick="selectAnswer('q1','a',this)">A. I'm doing great, thanks for asking!</div>
+<div class="option" onclick="selectAnswer('q1','b',this)">B. How do you do?</div>
+<div class="option" onclick="selectAnswer('q1','c',this)">C. I am a manager at my firm.</div>
+<div class="option" onclick="selectAnswer('q1','d',this)">D. Not much, what about you?</div>
+</div>
+
+<div class="question">
+2. If a colleague greets you casually by asking, "How's tricks?", what are they inquiring about?
+<div class="option" onclick="selectAnswer('q2','a',this)">A. Your favorite card game or magic tricks</div>
+<div class="option" onclick="selectAnswer('q2','b',this)">B. How your day or general life is going</div>
+<div class="option" onclick="selectAnswer('q2','c',this)">C. Technical errors with office equipment</div>
+<div class="option" onclick="selectAnswer('q2','d',this)">D. A request for a favor</div>
+</div>
+
+<div class="question">
+3. Which phrase is an idiomatic equivalent to "Long time no see" but carries a slightly warmer, more expressive tone?
+<div class="option" onclick="selectAnswer('q3','a',this)">A. It's been an absolute age!</div>
+<div class="option" onclick="selectAnswer('q3','b',this)">B. Goodbye for now.</div>
+<div class="option" onclick="selectAnswer('q3','c',this)">C. Pleased to make your acquaintance.</div>
+<div class="option" onclick="selectAnswer('q3','d',this)">D. Speak of the devil.</div>
+</div>
+
+<div class="question">
+4. Someone greets you in passing with "Alright?". What is the most appropriate native-like reaction?
+<div class="option" onclick="selectAnswer('q4','a',this)">A. No, I am experiencing several problems.</div>
+<div class="option" onclick="selectAnswer('q4','b',this)">B. Nod and say "Yeah, alright?" right back.</div>
+<div class="option" onclick="selectAnswer('q4','c',this)">C. Stand still and explain your evening schedule.</div>
+<div class="option" onclick="selectAnswer('q4','d',this)">D. Say "Thank you very much."</div>
+</div>
+
+<div class="question">
+5. In a formal networking environment, which phrase works best to transition from a greeting into explaining your purpose?
+<div class="option" onclick="selectAnswer('q5','a',this)">A. Yo, let's cut right to the chase.</div>
+<div class="option" onclick="selectAnswer('q5','b',this)">B. It’s a pleasure to connect with you. I wanted to follow up on...</div>
+<div class="option" onclick="selectAnswer('q5','c',this)">C. What's new with you? Listen to this...</div>
+<div class="option" onclick="selectAnswer('q5','d',this)">D. How's life treating you? Anyway...</div>
+</div>
+
+<div class="question">
+6. What does the greeting phrase "How are you holding up?" implicitly indicate?
+<div class="option" onclick="selectAnswer('q6','a',this)">A. The speaker wants to know if you can lift something heavy.</div>
+<div class="option" onclick="selectAnswer('q6','b',this)">B. The speaker knows you've been going through a difficult situation.</div>
+<div class="option" onclick="selectAnswer('q6','c',this)">C. The speaker is greeting a complete stranger.</div>
+<div class="option" onclick="selectAnswer('q6','d',this)">D. The speaker wants to know your financial standing.</div>
+</div>
+
+<div class="question">
+7. If someone says "It’s wonderful to finally see you in the flesh!", what does it mean?
+<div class="option" onclick="selectAnswer('q7','a',this)">A. They are meeting you in person after only communicating online.</div>
+<div class="option" onclick="selectAnswer('q7','b',this)">B. They are making a comment about your clothing choices.</div>
+<div class="option" onclick="selectAnswer('q7','c',this)">C. They think you look very tired or unhealthy.</div>
+<div class="option" onclick="selectAnswer('q7','d',this)">D. They are angry that you arrived late.</div>
+</div>
+
+<div class="question">
+8. Select the phrase that represents a highly professional, respectful greeting for a formal cover letter where the recipient's name is unknown:
+<div class="option" onclick="selectAnswer('q8','a',this)">A. To Whom It May Concern</div>
+<div class="option" onclick="selectAnswer('q8','b',this)">B. Hey Hiring Team</div>
+<div class="option" onclick="selectAnswer('q8','c',this)">C. Dear Hiring Manager</div>
+<div class="option" onclick="selectAnswer('q8','d',this)">D. Yo! Good morning</div>
+</div>
+
+<div class="question">
+9. What is the most natural reply to the casual greeting phrase "What have you been up to?"
+<div class="option" onclick="selectAnswer('q9','a',this)">A. Yes, I have been up there.</div>
+<div class="option" onclick="selectAnswer('q9','b',this)">B. Just the usual, keeping busy with work.</div>
+<div class="option" onclick="selectAnswer('q9','c',this)">C. I am 175 centimeters tall.</div>
+<div class="option" onclick="selectAnswer('q9','d',this)">D. Fine, thank you, and you?</div>
+</div>
+
+<div class="question">
+10. Which option represents a polite way to greet an unexpected guest while expressing pleasant surprise?
+<div class="option" onclick="selectAnswer('q10','a',this)">A. What brings you here? Explain yourself.</div>
+<div class="option" onclick="selectAnswer('q10','b',this)">B. What a pleasant surprise! Come on in.</div>
+<div class="option" onclick="selectAnswer('q10','c',this)">C. I wasn't expecting you at all today.</div>
+<div class="option" onclick="selectAnswer('q10','d',this)">D. Hello, why didn't you text me first?</div>
+</div>
+
+<div class="question">
+11. If a business client starts an email with "I hope this email finds you well," what type of tone does this set?
+<div class="option" onclick="selectAnswer('q11','a',this)">A. Archaic and completely incorrect</div>
+<div class="option" onclick="selectAnswer('q11','b',this)">B. Standard, courteous corporate correspondence</div>
+<div class="option" onclick="selectAnswer('q11','c',this)">C. Highly casual and intended only for close friends</div>
+<div class="option" onclick="selectAnswer('q11','d',this)">D. Urgent and demanding a quick reply</div>
+</div>
+
+<div class="question">
+12. When someone leaves a gathering and says, "Give my best to your family," what are they requesting?
+<div class="option" onclick="selectAnswer('q12','a',this)">A. A financial gift for their household</div>
+<div class="option" onclick="selectAnswer('q12','b',this)">B. That you pass on their warm regards and greetings to them</div>
+<div class="option" onclick="selectAnswer('q12','c',this)">C. To borrow a family member's vehicle</div>
+<div class="option" onclick="selectAnswer('q12','d',this)">D. To complain about the behavior of your family</div>
+</div>
+
+<div class="question">
+13. Which response works best when someone greets you with "Nice to see you" if you have already met them previously?
+<div class="option" onclick="selectAnswer('q13','a',this)">A. Nice to meet you too.</div>
+<div class="option" onclick="selectAnswer('q13','b',this)">B. Great to see you again too!</div>
+<div class="option" onclick="selectAnswer('q13','c',this)">C. Who are you exactly?</div>
+<div class="option" onclick="selectAnswer('q13','d',this)">D. Same here, stranger.</div>
+</div>
+
+<div class="question">
+14. What does the common parting greeting "Take care" communicate?
+<div class="option" onclick="selectAnswer('q14','a',this)">A. A warning about an immediate physical hazard nearby</div>
+<div class="option" onclick="selectAnswer('q14','b',this)">B. A warm, well-wishing farewell indicating safety and health</div>
+<div class="option" onclick="selectAnswer('q14','c',this)">C. A strict instruction to guard personal belongings</div>
+<div class="option" onclick="selectAnswer('q14','d',this)">D. An invitation to look after someone else's children</div>
+</div>
+
+<div class="question">
+15. If a business meeting is wrapping up, which expression is most professional to use as a closing statement?
+<div class="option" onclick="selectAnswer('q15','a',this)">A. Alright, I'm out of here. Catch you later.</div>
+<div class="option" onclick="selectAnswer('q15','b',this)">B. Thank you all for your time today. I look forward to our next steps.</div>
+<div class="option" onclick="selectAnswer('q15','c',this)">C. Bye, don't forget to send me money.</div>
+<div class="option" onclick="selectAnswer('q15','d',this)">D. Peace out, guys. Have fun.</div>
+</div>
+
+<button onclick="submitQuiz()">Submit Quiz</button>
+
+<div class="result" id="result"></div>
+
+<h2>🏆 Leaderboard</h2>
+<table border="1" width="100%">
+<tr>
+<th>Rank</th>
+<th>Name</th>
+<th>Class</th>
+<th>Score</th>
+<th>Time</th>
+</tr>
+<tbody id="ranking"></tbody>
+</table>
+
+</div>
+
+<!-- POPUP -->
+<div id="popup">
+<div class="popup-content">
+<button class="close-btn" onclick="closePopup()">X</button>
+<h2>📘 Explanations</h2>
+<div id="explanations"></div>
+</div>
+</div>
+
+<script>
+
+// ANSWERS
+const answers = {
+q1:"b", q2:"b", q3:"a", q4:"b", q5:"b",
+q6:"b", q7:"a", q8:"c", q9:"b", q10:"b",
+q11:"b", q12:"b", q13:"b", q14:"b", q15:"b"
+};
+
+// EXPLANATIONS
+const explanations = {
+q1:"'How do you do?' is a formulaic ritual, not a literal question. The correct formal response is simply to repeat the phrase back to them.",
+q2:"'How's tricks?' is an old-school, friendly idiom that simply means 'How are things going?' or 'How are you?'.",
+q3:"'It's been an absolute age' adds a dramatic, warm emphasis on how long it has been since you last saw the person.",
+q4:"In regions like the UK, 'Alright?' functions as a passing acknowledgment rather than an invitation to chat. Giving a quick nod and repeating it back is the standard response.",
+q5:"This phrase establishes polite, corporate rapport before transitioning into business details smoothly.",
+q6:"To 'hold up' refers to surviving or coping with stress, grief, or a tough period, making this an empathetic greeting.",
+q7:"'In the flesh' means meeting physically in real life, typically after interacting strictly via email or video calls.",
+q8:"While 'To Whom It May Concern' is okay, modern professional writing prefers targeting a specific title, making 'Dear Hiring Manager' the best fit.",
+q9:"'What have you been up to?' asks for a summary of your recent activities, so sharing a brief update about work or life is appropriate.",
+q10:"'What a pleasant surprise!' immediately frames their unannounced arrival as a positive event.",
+q11:"This phrase is an industry-standard, polite introductory formula used in professional emails.",
+q12:"'Give my best to...' is an idiom used to send kind thoughts and greetings to loved ones who are not present.",
+q13:"Saying 'Nice to meet you' to someone you already know implies you forgot them. 'Great to see you again' perfectly validates your shared history.",
+q14:"'Take care' is a gentle, warm way of closing a conversation by wishing someone safety and physical well-being.",
+q15:"This closing shows appreciation for the participants' time and sets a collaborative expectation for the future."
+};
+
+// SELECTED ANSWERS
+let selectedAnswers = {};
+
+function selectAnswer(q, ans, el){
+
+selectedAnswers[q] = ans;
+
+let options = el.parentNode.querySelectorAll(".option");
+options.forEach(o => o.classList.remove("selected"));
+
+el.classList.add("selected");
+}
+
+// SOUND
+const correctSound = new Audio("https://www.soundjay.com/buttons/sounds/button-4.mp3");
+const wrongSound = new Audio("https://www.soundjay.com/buttons/sounds/button-10.mp3");
+
+function submitQuiz(){
+
+let name = document.getElementById("name").value;
+let cls = document.getElementById("class").value;
+
+if (!name || !cls) {
+    alert("Please fill in your Name and Class before submitting!");
+    return;
+}
+
+let score = 0;
+let output = "";
+
+for(let i=1;i<=15;i++){
+
+if(selectedAnswers["q"+i] === answers["q"+i]){
+score++;
+correctSound.play();
+output += `<p>✔ Q${i}: Correct - ${explanations["q"+i]}</p>`;
+}else{
+wrongSound.play();
+output += `<p>❌ Q${i}: Wrong - ${explanations["q"+i]}</p>`;
+}
+}
+
+let time = new Date().toLocaleString();
+
+// SAVE RANKING LOKAL
+let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
+ranking.push({name, class:cls, score, time});
+localStorage.setItem("ranking", JSON.stringify(ranking));
+
+loadRanking();
+
+// UPDATE TAMPILAN RESULT OUT OF 15
+document.getElementById("result").innerHTML = `
+<h3>🎯 Result</h3>
+Name: ${name}<br>
+Class: ${cls}<br>
+Score: ${score}/15<br>
+Time: ${time}<br>
+<span id="save-status" style="color: #f39c12; font-weight: bold; margin-top:10px; display:inline-block;">🔄 Saving to Server/Excel...</span>
+`;
+
+showPopup(output);
+
+// SEND TO GOOGLE SHEETS API
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxNy0INk-z1jDesKlPZhfWD-5H30Pd0BGPcgcXZ99vBcPbFByPt5x21YTyjnKvWpz4s/exec";
+
+let dataToSave = {
+    quizType: "greetings",
+    name: name,
+    class: cls,
+    score: score,
+    time: time
+};
+
+fetch(SCRIPT_URL, {
+    method: "POST",
+    headers: {
+        "Content-Type": "text/plain"
+    },
+    body: JSON.stringify(dataToSave)
+})
+.then(response => response.json())
+.then(data => {
+    let statusEl = document.getElementById("save-status");
+    if(data.result === "success") {
+        statusEl.innerHTML = "✔️ Saved to Excel successfully!";
+        statusEl.style.color = "#2ecc71";
+    } else {
+        statusEl.innerHTML = "❌ Failed to save to Excel.";
+        statusEl.style.color = "red";
+    }
+})
+.catch(error => {
+    let statusEl = document.getElementById("save-status");
+    statusEl.innerHTML = "❌ Error connecting to server.";
+    statusEl.style.color = "red";
+    console.error("Fetch error:", error);
+});
+}
+
+// LEADERBOARD
+function loadRanking(){
+let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
+ranking.sort((a,b)=>b.score - a.score);
+
+let table = document.getElementById("ranking");
+table.innerHTML = "";
+
+ranking.forEach((r,index)=>{
+
+let badge = "";
+if(index===0) badge="🥇 GOLD";
+else if(index===1) badge="🥈 SILVER";
+else if(index===2) badge="🥉 BRONZE";
+else badge="—";
+
+table.innerHTML += `
+<tr>
+<td>${badge}</td>
+<td>${r.name}</td>
+<td>${r.class}</td>
+<td>${r.score}</td>
+<td>${r.time}</td>
+</tr>`;
+});
+}
+
+function showPopup(html){
+document.getElementById("explanations").innerHTML = html;
+document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup(){
+document.getElementById("popup").style.display = "none";
+}
+
+loadRanking();
+
+</script>
+
+</body>
+</html>
+change the quiz type for spreadsheet to greetings2
+
+Here is the updated index.html code with the quizType specifically changed to "greetings2" so it routes accurately to your newly specified spreadsheet logic.
+
+Everything else regarding the 15 intermediate-level questions, scoring, and UI remains completely unchanged.
+
+HTML
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Greetings Intermediate Quiz</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    font-family:'Poppins', sans-serif;
+    margin:0;
+    background: linear-gradient(135deg,#74ebd5,#9face6);
+}
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+}
+
+h1{text-align:center;}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:5px 0 10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+/* QUESTION STYLE */
+.question{
+    background:#f8f9ff;
+    padding:15px;
+    margin-bottom:15px;
+    border-left:6px solid #6c63ff;
+    border-radius:10px;
+}
+
+/* CLICKABLE OPTIONS */
+.option{
+    display:block;
+    padding:10px;
+    margin:6px 0;
+    border:2px solid #ddd;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.2s;
+    background:white;
+}
+
+.option:hover{
+    border-color:#6c63ff;
+    transform:scale(1.02);
+}
+
+.option.selected{
+    background:#6c63ff;
+    color:white;
+    border-color:#6c63ff;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#6c63ff;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* RESULT */
+.result{
+    margin-top:15px;
+    padding:15px;
+    background:#eaffea;
+    border-left:6px solid #2ecc71;
+    border-radius:10px;
+}
+
+/* POPUP */
+#popup{
+    display:none;
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-content{
+    background:white;
+    padding:20px;
+    width:85%;
+    max-width:650px;
+    border-radius:12px;
+    max-height:80%;
+    overflow-y:auto;
+}
+
+.close-btn{
+    background:red;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    float:right;
+    border-radius:8px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌟 Greetings Intermediate Quiz</h1>
+
+<input id="name" placeholder="Name">
+<input id="class" placeholder="Class">
+
+<!-- QUESTIONS -->
+
+<div class="question">
+1. When a business associate greets you with "How do you do?", what is culturally considered the most appropriate formal response?
+<div class="option" onclick="selectAnswer('q1','a',this)">A. I'm doing great, thanks for asking!</div>
+<div class="option" onclick="selectAnswer('q1','b',this)">B. How do you do?</div>
+<div class="option" onclick="selectAnswer('q1','c',this)">C. I am a manager at my firm.</div>
+<div class="option" onclick="selectAnswer('q1','d',this)">D. Not much, what about you?</div>
+</div>
+
+<div class="question">
+2. If a colleague greets you casually by asking, "How's tricks?", what are they inquiring about?
+<div class="option" onclick="selectAnswer('q2','a',this)">A. Your favorite card game or magic tricks</div>
+<div class="option" onclick="selectAnswer('q2','b',this)">B. How your day or general life is going</div>
+<div class="option" onclick="selectAnswer('q2','c',this)">C. Technical errors with office equipment</div>
+<div class="option" onclick="selectAnswer('q2','d',this)">D. A request for a favor</div>
+</div>
+
+<div class="question">
+3. Which phrase is an idiomatic equivalent to "Long time no see" but carries a slightly warmer, more expressive tone?
+<div class="option" onclick="selectAnswer('q3','a',this)">A. It's been an absolute age!</div>
+<div class="option" onclick="selectAnswer('q3','b',this)">B. Goodbye for now.</div>
+<div class="option" onclick="selectAnswer('q3','c',this)">C. Pleased to make your acquaintance.</div>
+<div class="option" onclick="selectAnswer('q3','d',this)">D. Speak of the devil.</div>
+</div>
+
+<div class="question">
+4. Someone greets you in passing with "Alright?". What is the most appropriate native-like reaction?
+<div class="option" onclick="selectAnswer('q4','a',this)">A. No, I am experiencing several problems.</div>
+<div class="option" onclick="selectAnswer('q4','b',this)">B. Nod and say "Yeah, alright?" right back.</div>
+<div class="option" onclick="selectAnswer('q4','c',this)">C. Stand still and explain your evening schedule.</div>
+<div class="option" onclick="selectAnswer('q4','d',this)">D. Say "Thank you very much."</div>
+</div>
+
+<div class="question">
+5. In a formal networking environment, which phrase works best to transition from a greeting into explaining your purpose?
+<div class="option" onclick="selectAnswer('q5','a',this)">A. Yo, let's cut right to the chase.</div>
+<div class="option" onclick="selectAnswer('q5','b',this)">B. It’s a pleasure to connect with you. I wanted to follow up on...</div>
+<div class="option" onclick="selectAnswer('q5','c',this)">C. What's new with you? Listen to this...</div>
+<div class="option" onclick="selectAnswer('q5','d',this)">D. How's life treating you? Anyway...</div>
+</div>
+
+<div class="question">
+6. What does the greeting phrase "How are you holding up?" implicitly indicate?
+<div class="option" onclick="selectAnswer('q6','a',this)">A. The speaker wants to know if you can lift something heavy.</div>
+<div class="option" onclick="selectAnswer('q6','b',this)">B. The speaker knows you've been going through a difficult situation.</div>
+<div class="option" onclick="selectAnswer('q6','c',this)">C. The speaker is greeting a complete stranger.</div>
+<div class="option" onclick="selectAnswer('q6','d',this)">D. The speaker wants to know your financial standing.</div>
+</div>
+
+<div class="question">
+7. If someone says "It’s wonderful to finally see you in the flesh!", what does it mean?
+<div class="option" onclick="selectAnswer('q7','a',this)">A. They are meeting you in person after only communicating online.</div>
+<div class="option" onclick="selectAnswer('q7','b',this)">B. They are making a comment about your clothing choices.</div>
+<div class="option" onclick="selectAnswer('q7','c',this)">C. They think you look very tired or unhealthy.</div>
+<div class="option" onclick="selectAnswer('q7','d',this)">D. They are angry that you arrived late.</div>
+</div>
+
+<div class="question">
+8. Select the phrase that represents a highly professional, respectful greeting for a formal cover letter where the recipient's name is unknown:
+<div class="option" onclick="selectAnswer('q8','a',this)">A. To Whom It May Concern</div>
+<div class="option" onclick="selectAnswer('q8','b',this)">B. Hey Hiring Team</div>
+<div class="option" onclick="selectAnswer('q8','c',this)">C. Dear Hiring Manager</div>
+<div class="option" onclick="selectAnswer('q8','d',this)">D. Yo! Good morning</div>
+</div>
+
+<div class="question">
+9. What is the most natural reply to the casual greeting phrase "What have you been up to?"
+<div class="option" onclick="selectAnswer('q9','a',this)">A. Yes, I have been up there.</div>
+<div class="option" onclick="selectAnswer('q9','b',this)">B. Just the usual, keeping busy with work.</div>
+<div class="option" onclick="selectAnswer('q9','c',this)">C. I am 175 centimeters tall.</div>
+<div class="option" onclick="selectAnswer('q9','d',this)">D. Fine, thank you, and you?</div>
+</div>
+
+<div class="question">
+10. Which option represents a polite way to greet an unexpected guest while expressing pleasant surprise?
+<div class="option" onclick="selectAnswer('q10','a',this)">A. What brings you here? Explain yourself.</div>
+<div class="option" onclick="selectAnswer('q10','b',this)">B. What a pleasant surprise! Come on in.</div>
+<div class="option" onclick="selectAnswer('q10','c',this)">C. I wasn't expecting you at all today.</div>
+<div class="option" onclick="selectAnswer('q10','d',this)">D. Hello, why didn't you text me first?</div>
+</div>
+
+<div class="question">
+11. If a business client starts an email with "I hope this email finds you well," what type of tone does this set?
+<div class="option" onclick="selectAnswer('q11','a',this)">A. Archaic and completely incorrect</div>
+<div class="option" onclick="selectAnswer('q11','b',this)">B. Standard, courteous corporate correspondence</div>
+<div class="option" onclick="selectAnswer('q11','c',this)">C. Highly casual and intended only for close friends</div>
+<div class="option" onclick="selectAnswer('q11','d',this)">D. Urgent and demanding a quick reply</div>
+</div>
+
+<div class="question">
+12. When someone leaves a gathering and says, "Give my best to your family," what are they requesting?
+<div class="option" onclick="selectAnswer('q12','a',this)">A. A financial gift for their household</div>
+<div class="option" onclick="selectAnswer('q12','b',this)">B. That you pass on their warm regards and greetings to them</div>
+<div class="option" onclick="selectAnswer('q12','c',this)">C. To borrow a family member's vehicle</div>
+<div class="option" onclick="selectAnswer('q12','d',this)">D. To complain about the behavior of your family</div>
+</div>
+
+<div class="question">
+13. Which response works best when someone greets you with "Nice to see you" if you have already met them previously?
+<div class="option" onclick="selectAnswer('q13','a',this)">A. Nice to meet you too.</div>
+<div class="option" onclick="selectAnswer('q13','b',this)">B. Great to see you again too!</div>
+<div class="option" onclick="selectAnswer('q13','c',this)">C. Who are you exactly?</div>
+<div class="option" onclick="selectAnswer('q13','d',this)">D. Same here, stranger.</div>
+</div>
+
+<div class="question">
+14. What does the common parting greeting "Take care" communicate?
+<div class="option" onclick="selectAnswer('q14','a',this)">A. A warning about an immediate physical hazard nearby</div>
+<div class="option" onclick="selectAnswer('q14','b',this)">B. A warm, well-wishing farewell indicating safety and health</div>
+<div class="option" onclick="selectAnswer('q14','c',this)">C. A strict instruction to guard personal belongings</div>
+<div class="option" onclick="selectAnswer('q14','d',this)">D. An invitation to look after someone else's children</div>
+</div>
+
+<div class="question">
+15. If a business meeting is wrapping up, which expression is most professional to use as a closing statement?
+<div class="option" onclick="selectAnswer('q15','a',this)">A. Alright, I'm out of here. Catch you later.</div>
+<div class="option" onclick="selectAnswer('q15','b',this)">B. Thank you all for your time today. I look forward to our next steps.</div>
+<div class="option" onclick="selectAnswer('q15','c',this)">C. Bye, don't forget to send me money.</div>
+<div class="option" onclick="selectAnswer('q15','d',this)">D. Peace out, guys. Have fun.</div>
+</div>
+
+<button onclick="submitQuiz()">Submit Quiz</button>
+
+<div class="result" id="result"></div>
+
+<h2>🏆 Leaderboard</h2>
+<table border="1" width="100%">
+<tr>
+<th>Rank</th>
+<th>Name</th>
+<th>Class</th>
+<th>Score</th>
+<th>Time</th>
+</tr>
+<tbody id="ranking"></tbody>
+</table>
+
+</div>
+
+<!-- POPUP -->
+<div id="popup">
+<div class="popup-content">
+<button class="close-btn" onclick="closePopup()">X</button>
+<h2>📘 Explanations</h2>
+<div id="explanations"></div>
+</div>
+</div>
+
+<script>
+
+// ANSWERS
+const answers = {
+q1:"b", q2:"b", q3:"a", q4:"b", q5:"b",
+q6:"b", q7:"a", q8:"c", q9:"b", q10:"b",
+q11:"b", q12:"b", q13:"b", q14:"b", q15:"b"
+};
+
+// EXPLANATIONS
+const explanations = {
+q1:"'How do you do?' is a formulaic ritual, not a literal question. The correct formal response is simply to repeat the phrase back to them.",
+q2:"'How's tricks?' is an old-school, friendly idiom that simply means 'How are things going?' or 'How are you?'.",
+q3:"'It's been an absolute age' adds a dramatic, warm emphasis on how long it has been since you last saw the person.",
+q4:"In regions like the UK, 'Alright?' functions as a passing acknowledgment rather than an invitation to chat. Giving a quick nod and repeating it back is the standard response.",
+q5:"This phrase establishes polite, corporate rapport before transitioning into business details smoothly.",
+q6:"To 'hold up' refers to surviving or coping with stress, grief, or a tough period, making this an empathetic greeting.",
+q7:"'In the flesh' means meeting physically in real life, typically after interacting strictly via email or video calls.",
+q8:"While 'To Whom It May Concern' is okay, modern professional writing prefers targeting a specific title, making 'Dear Hiring Manager' the best fit.",
+q9:"'What have you been up to?' asks for a summary of your recent activities, so sharing a brief update about work or life is appropriate.",
+q10:"'What a pleasant surprise!' immediately frames their unannounced arrival as a positive event.",
+q11:"This phrase is an industry-standard, polite introductory formula used in professional emails.",
+q12:"'Give my best to...' is an idiom used to send kind thoughts and greetings to loved ones who are not present.",
+q13:"Saying 'Nice to meet you' to someone you already know implies you forgot them. 'Great to see you again' perfectly validates your shared history.",
+q14:"'Take care' is a gentle, warm way of closing a conversation by wishing someone safety and physical well-being.",
+q15:"This closing shows appreciation for the participants' time and sets a collaborative expectation for the future."
+};
+
+// SELECTED ANSWERS
+let selectedAnswers = {};
+
+function selectAnswer(q, ans, el){
+
+selectedAnswers[q] = ans;
+
+let options = el.parentNode.querySelectorAll(".option");
+options.forEach(o => o.classList.remove("selected"));
+
+el.classList.add("selected");
+}
+
+// SOUND
+const correctSound = new Audio("https://www.soundjay.com/buttons/sounds/button-4.mp3");
+const wrongSound = new Audio("https://www.soundjay.com/buttons/sounds/button-10.mp3");
+
+function submitQuiz(){
+
+let name = document.getElementById("name").value;
+let cls = document.getElementById("class").value;
+
+if (!name || !cls) {
+    alert("Please fill in your Name and Class before submitting!");
+    return;
+}
+
+let score = 0;
+let output = "";
+
+for(let i=1;i<=15;i++){
+
+if(selectedAnswers["q"+i] === answers["q"+i]){
+score++;
+correctSound.play();
+output += `<p>✔ Q${i}: Correct - ${explanations["q"+i]}</p>`;
+}else{
+wrongSound.play();
+output += `<p>❌ Q${i}: Wrong - ${explanations["q"+i]}</p>`;
+}
+}
+
+let time = new Date().toLocaleString();
+
+// SAVE RANKING LOKAL
+let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
+ranking.push({name, class:cls, score, time});
+localStorage.setItem("ranking", JSON.stringify(ranking));
+
+loadRanking();
+
+// UPDATE TAMPILAN RESULT OUT OF 15
+document.getElementById("result").innerHTML = `
+<h3>🎯 Result</h3>
+Name: ${name}<br>
+Class: ${cls}<br>
+Score: ${score}/15<br>
+Time: ${time}<br>
+<span id="save-status" style="color: #f39c12; font-weight: bold; margin-top:10px; display:inline-block;">🔄 Saving to Server/Excel...</span>
+`;
+
+showPopup(output);
+
+// SEND TO GOOGLE SHEETS API
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxNy0INk-z1jDesKlPZhfWD-5H30Pd0BGPcgcXZ99vBcPbFByPt5x21YTyjnKvWpz4s/exec";
+
+let dataToSave = {
+    quizType: "greetings2",
+    name: name,
+    class: cls,
+    score: score,
+    time: time
+};
+
+fetch(SCRIPT_URL, {
+    method: "POST",
+    headers: {
+        "Content-Type": "text/plain"
+    },
+    body: JSON.stringify(dataToSave)
+})
+.then(response => response.json())
+.then(data => {
+    let statusEl = document.getElementById("save-status");
+    if(data.result === "success") {
+        statusEl.innerHTML = "✔️ Saved to Excel successfully!";
+        statusEl.style.color = "#2ecc71";
+    } else {
+        statusEl.innerHTML = "❌ Failed to save to Excel.";
+        statusEl.style.color = "red";
+    }
+})
+.catch(error => {
+    let statusEl = document.getElementById("save-status");
+    statusEl.innerHTML = "❌ Error connecting to server.";
+    statusEl.style.color = "red";
+    console.error("Fetch error:", error);
+});
+}
+
+// LEADERBOARD
+function loadRanking(){
+let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
+ranking.sort((a,b)=>b.score - a.score);
+
+let table = document.getElementById("ranking");
+table.innerHTML = "";
+
+ranking.forEach((r,index)=>{
+
+let badge = "";
+if(index===0) badge="🥇 GOLD";
+else if(index===1) badge="🥈 SILVER";
+else if(index===2) badge="🥉 BRONZE";
+else badge="—";
+
+table.innerHTML += `
+<tr>
+<td>${badge}</td>
+<td>${r.name}</td>
+<td>${r.class}</td>
+<td>${r.score}</td>
+<td>${r.time}</td>
+</tr>`;
+});
+}
+
+function showPopup(html){
+document.getElementById("explanations").innerHTML = html;
+document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup(){
+document.getElementById("popup").style.display = "none";
+}
+
+loadRanking();
+
+</script>
+
+</body>
+</html>
+can you change the leader board so everyone onine can see
+
+To make the leaderboard visible to everyone online, we have to stop using localStorage (which only saves scores to the individual user's personal device) and instead fetch the scores directly from your Google Spreadsheet.
+
+To do this, we need to update two things:
+
+Your Google Apps Script (so it can send the data back to the website).
+
+Your index.html file (so it can request and display that data).
+
+Here is exactly how to set this up.
+
+Step 1: Update Your Google Apps Script
+We need to add a doGet() function to your script so it knows how to read your spreadsheet and send the leaderboard back to the students.
+
+Open your Google Spreadsheet and go to Extensions > Apps Script.
+
+Replace your entire code with this new version:
+
+JavaScript
+// This function SAVES data to the sheet (what you already have)
+function doPost(e) {
+  try {
+    var data = JSON.parse(e.postData.contents);
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var sheet;
+    
+    if (data.quizType === "greetings2" || data.quizType === "greetings") {
+      sheet = ss.getSheetByName("Greetings Quiz");
+    } else if (data.quizType === "offering_help") {
+      sheet = ss.getSheetByName("Offering Help");
+    } else {
+      sheet = ss.getSheets()[0];
+    }
+    
+    if (!sheet) {
+      sheet = ss.getSheets()[0];
+    }
+    
+    sheet.appendRow([data.name, data.class, data.score, data.time]);
+    
+    return ContentService.createTextOutput(JSON.stringify({"result": "success"}))
+                         .setMimeType(ContentService.MimeType.JSON);
+                         
+  } catch (error) {
+    return ContentService.createTextOutput(JSON.stringify({"result": "error", "error": error.toString()}))
+                         .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+// NEW: This function FETCHES the leaderboard data from the sheet for everyone to see
+function doGet(e) {
+  try {
+    var quizType = e.parameter.quizType;
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var sheet;
+    
+    // Choose which sheet to read from based on the quizType parameter
+    if (quizType === "greetings2" || quizType === "greetings") {
+      sheet = ss.getSheetByName("Greetings Quiz");
+    } else if (quizType === "offering_help") {
+      sheet = ss.getSheetByName("Offering Help");
+    } else {
+      sheet = ss.getSheets()[0];
+    }
+    
+    if (!sheet) sheet = ss.getSheets()[0];
+    
+    var data = sheet.getDataRange().getValues();
+    var leaderboard = [];
+    
+    // Start at index 1 to skip the header row (Name, Class, Score, Time)
+    for (var i = 1; i < data.length; i++) {
+      if (data[i][0] !== "") { // Make sure the row isn't empty
+        leaderboard.push({
+          name: data[i][0],
+          class: data[i][1],
+          score: Number(data[i][2]), // Treat score as a number
+          time: data[i][3]
+        });
+      }
+    }
+    
+    // Sort the leaderboard from highest score to lowest
+    leaderboard.sort(function(a, b) {
+      return b.score - a.score;
+    });
+    
+    // Return the sorted data to the website
+    return ContentService.createTextOutput(JSON.stringify({"result": "success", "data": leaderboard}))
+                         .setMimeType(ContentService.MimeType.JSON);
+                         
+  } catch (error) {
+    return ContentService.createTextOutput(JSON.stringify({"result": "error", "error": error.toString()}))
+                         .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+CRITICAL STEP: You must re-deploy for the new code to work. Click Deploy (top right) > Manage deployments > Edit (Pencil Icon) > Change version to New version > Deploy.
+
+Step 2: Update Your HTML File
+Here is your updated index.html file. I have completely rewritten the loadRanking() function so that instead of looking at the phone's local storage, it actively downloads the global high scores from your Google Sheet when the page loads, and re-downloads it whenever someone submits a new score!
+
+HTML
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Greetings Intermediate Quiz</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    font-family:'Poppins', sans-serif;
+    margin:0;
+    background: linear-gradient(135deg,#74ebd5,#9face6);
+}
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+}
+
+h1{text-align:center;}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:5px 0 10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+/* QUESTION STYLE */
+.question{
+    background:#f8f9ff;
+    padding:15px;
+    margin-bottom:15px;
+    border-left:6px solid #6c63ff;
+    border-radius:10px;
+}
+
+/* CLICKABLE OPTIONS */
+.option{
+    display:block;
+    padding:10px;
+    margin:6px 0;
+    border:2px solid #ddd;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.2s;
+    background:white;
+}
+
+.option:hover{
+    border-color:#6c63ff;
+    transform:scale(1.02);
+}
+
+.option.selected{
+    background:#6c63ff;
+    color:white;
+    border-color:#6c63ff;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#6c63ff;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* RESULT */
+.result{
+    margin-top:15px;
+    padding:15px;
+    background:#eaffea;
+    border-left:6px solid #2ecc71;
+    border-radius:10px;
+}
+
+/* POPUP */
+#popup{
+    display:none;
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-content{
+    background:white;
+    padding:20px;
+    width:85%;
+    max-width:650px;
+    border-radius:12px;
+    max-height:80%;
+    overflow-y:auto;
+}
+
+.close-btn{
+    background:red;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    float:right;
+    border-radius:8px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌟 Greetings Intermediate Quiz</h1>
+
+<input id="name" placeholder="Name">
+<input id="class" placeholder="Class">
+
+<!-- QUESTIONS -->
+
+<div class="question">
+1. When a business associate greets you with "How do you do?", what is culturally considered the most appropriate formal response?
+<div class="option" onclick="selectAnswer('q1','a',this)">A. I'm doing great, thanks for asking!</div>
+<div class="option" onclick="selectAnswer('q1','b',this)">B. How do you do?</div>
+<div class="option" onclick="selectAnswer('q1','c',this)">C. I am a manager at my firm.</div>
+<div class="option" onclick="selectAnswer('q1','d',this)">D. Not much, what about you?</div>
+</div>
+
+<div class="question">
+2. If a colleague greets you casually by asking, "How's tricks?", what are they inquiring about?
+<div class="option" onclick="selectAnswer('q2','a',this)">A. Your favorite card game or magic tricks</div>
+<div class="option" onclick="selectAnswer('q2','b',this)">B. How your day or general life is going</div>
+<div class="option" onclick="selectAnswer('q2','c',this)">C. Technical errors with office equipment</div>
+<div class="option" onclick="selectAnswer('q2','d',this)">D. A request for a favor</div>
+</div>
+
+<div class="question">
+3. Which phrase is an idiomatic equivalent to "Long time no see" but carries a slightly warmer, more expressive tone?
+<div class="option" onclick="selectAnswer('q3','a',this)">A. It's been an absolute age!</div>
+<div class="option" onclick="selectAnswer('q3','b',this)">B. Goodbye for now.</div>
+<div class="option" onclick="selectAnswer('q3','c',this)">C. Pleased to make your acquaintance.</div>
+<div class="option" onclick="selectAnswer('q3','d',this)">D. Speak of the devil.</div>
+</div>
+
+<div class="question">
+4. Someone greets you in passing with "Alright?". What is the most appropriate native-like reaction?
+<div class="option" onclick="selectAnswer('q4','a',this)">A. No, I am experiencing several problems.</div>
+<div class="option" onclick="selectAnswer('q4','b',this)">B. Nod and say "Yeah, alright?" right back.</div>
+<div class="option" onclick="selectAnswer('q4','c',this)">C. Stand still and explain your evening schedule.</div>
+<div class="option" onclick="selectAnswer('q4','d',this)">D. Say "Thank you very much."</div>
+</div>
+
+<div class="question">
+5. In a formal networking environment, which phrase works best to transition from a greeting into explaining your purpose?
+<div class="option" onclick="selectAnswer('q5','a',this)">A. Yo, let's cut right to the chase.</div>
+<div class="option" onclick="selectAnswer('q5','b',this)">B. It’s a pleasure to connect with you. I wanted to follow up on...</div>
+<div class="option" onclick="selectAnswer('q5','c',this)">C. What's new with you? Listen to this...</div>
+<div class="option" onclick="selectAnswer('q5','d',this)">D. How's life treating you? Anyway...</div>
+</div>
+
+<div class="question">
+6. What does the greeting phrase "How are you holding up?" implicitly indicate?
+<div class="option" onclick="selectAnswer('q6','a',this)">A. The speaker wants to know if you can lift something heavy.</div>
+<div class="option" onclick="selectAnswer('q6','b',this)">B. The speaker knows you've been going through a difficult situation.</div>
+<div class="option" onclick="selectAnswer('q6','c',this)">C. The speaker is greeting a complete stranger.</div>
+<div class="option" onclick="selectAnswer('q6','d',this)">D. The speaker wants to know your financial standing.</div>
+</div>
+
+<div class="question">
+7. If someone says "It’s wonderful to finally see you in the flesh!", what does it mean?
+<div class="option" onclick="selectAnswer('q7','a',this)">A. They are meeting you in person after only communicating online.</div>
+<div class="option" onclick="selectAnswer('q7','b',this)">B. They are making a comment about your clothing choices.</div>
+<div class="option" onclick="selectAnswer('q7','c',this)">C. They think you look very tired or unhealthy.</div>
+<div class="option" onclick="selectAnswer('q7','d',this)">D. They are angry that you arrived late.</div>
+</div>
+
+<div class="question">
+8. Select the phrase that represents a highly professional, respectful greeting for a formal cover letter where the recipient's name is unknown:
+<div class="option" onclick="selectAnswer('q8','a',this)">A. To Whom It May Concern</div>
+<div class="option" onclick="selectAnswer('q8','b',this)">B. Hey Hiring Team</div>
+<div class="option" onclick="selectAnswer('q8','c',this)">C. Dear Hiring Manager</div>
+<div class="option" onclick="selectAnswer('q8','d',this)">D. Yo! Good morning</div>
+</div>
+
+<div class="question">
+9. What is the most natural reply to the casual greeting phrase "What have you been up to?"
+<div class="option" onclick="selectAnswer('q9','a',this)">A. Yes, I have been up there.</div>
+<div class="option" onclick="selectAnswer('q9','b',this)">B. Just the usual, keeping busy with work.</div>
+<div class="option" onclick="selectAnswer('q9','c',this)">C. I am 175 centimeters tall.</div>
+<div class="option" onclick="selectAnswer('q9','d',this)">D. Fine, thank you, and you?</div>
+</div>
+
+<div class="question">
+10. Which option represents a polite way to greet an unexpected guest while expressing pleasant surprise?
+<div class="option" onclick="selectAnswer('q10','a',this)">A. What brings you here? Explain yourself.</div>
+<div class="option" onclick="selectAnswer('q10','b',this)">B. What a pleasant surprise! Come on in.</div>
+<div class="option" onclick="selectAnswer('q10','c',this)">C. I wasn't expecting you at all today.</div>
+<div class="option" onclick="selectAnswer('q10','d',this)">D. Hello, why didn't you text me first?</div>
+</div>
+
+<div class="question">
+11. If a business client starts an email with "I hope this email finds you well," what type of tone does this set?
+<div class="option" onclick="selectAnswer('q11','a',this)">A. Archaic and completely incorrect</div>
+<div class="option" onclick="selectAnswer('q11','b',this)">B. Standard, courteous corporate correspondence</div>
+<div class="option" onclick="selectAnswer('q11','c',this)">C. Highly casual and intended only for close friends</div>
+<div class="option" onclick="selectAnswer('q11','d',this)">D. Urgent and demanding a quick reply</div>
+</div>
+
+<div class="question">
+12. When someone leaves a gathering and says, "Give my best to your family," what are they requesting?
+<div class="option" onclick="selectAnswer('q12','a',this)">A. A financial gift for their household</div>
+<div class="option" onclick="selectAnswer('q12','b',this)">B. That you pass on their warm regards and greetings to them</div>
+<div class="option" onclick="selectAnswer('q12','c',this)">C. To borrow a family member's vehicle</div>
+<div class="option" onclick="selectAnswer('q12','d',this)">D. To complain about the behavior of your family</div>
+</div>
+
+<div class="question">
+13. Which response works best when someone greets you with "Nice to see you" if you have already met them previously?
+<div class="option" onclick="selectAnswer('q13','a',this)">A. Nice to meet you too.</div>
+<div class="option" onclick="selectAnswer('q13','b',this)">B. Great to see you again too!</div>
+<div class="option" onclick="selectAnswer('q13','c',this)">C. Who are you exactly?</div>
+<div class="option" onclick="selectAnswer('q13','d',this)">D. Same here, stranger.</div>
+</div>
+
+<div class="question">
+14. What does the common parting greeting "Take care" communicate?
+<div class="option" onclick="selectAnswer('q14','a',this)">A. A warning about an immediate physical hazard nearby</div>
+<div class="option" onclick="selectAnswer('q14','b',this)">B. A warm, well-wishing farewell indicating safety and health</div>
+<div class="option" onclick="selectAnswer('q14','c',this)">C. A strict instruction to guard personal belongings</div>
+<div class="option" onclick="selectAnswer('q14','d',this)">D. An invitation to look after someone else's children</div>
+</div>
+
+<div class="question">
+15. If a business meeting is wrapping up, which expression is most professional to use as a closing statement?
+<div class="option" onclick="selectAnswer('q15','a',this)">A. Alright, I'm out of here. Catch you later.</div>
+<div class="option" onclick="selectAnswer('q15','b',this)">B. Thank you all for your time today. I look forward to our next steps.</div>
+<div class="option" onclick="selectAnswer('q15','c',this)">C. Bye, don't forget to send me money.</div>
+<div class="option" onclick="selectAnswer('q15','d',this)">D. Peace out, guys. Have fun.</div>
+</div>
+
+<button onclick="submitQuiz()">Submit Quiz</button>
+
+<div class="result" id="result"></div>
+
+<h2>🏆 Global Online Leaderboard</h2>
+<table border="1" width="100%">
+<tr>
+<th>Rank</th>
+<th>Name</th>
+<th>Class</th>
+<th>Score</th>
+<th>Time</th>
+</tr>
+<tbody id="ranking">
+<tr><td colspan='5' style='text-align:center;'>Loading Leaderboard... 🌍</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<!-- POPUP -->
+<div id="popup">
+<div class="popup-content">
+<button class="close-btn" onclick="closePopup()">X</button>
+<h2>📘 Explanations</h2>
+<div id="explanations"></div>
+</div>
+</div>
+
+<script>
+
+// YOUR GOOGLE SHEETS SCRIPT URL
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxNy0INk-z1jDesKlPZhfWD-5H30Pd0BGPcgcXZ99vBcPbFByPt5x21YTyjnKvWpz4s/exec";
+
+// ANSWERS & EXPLANATIONS
+const answers = {
+q1:"b", q2:"b", q3:"a", q4:"b", q5:"b",
+q6:"b", q7:"a", q8:"c", q9:"b", q10:"b",
+q11:"b", q12:"b", q13:"b", q14:"b", q15:"b"
+};
+
+const explanations = {
+q1:"'How do you do?' is a formulaic ritual, not a literal question. The correct formal response is simply to repeat the phrase back to them.",
+q2:"'How's tricks?' is an old-school, friendly idiom that simply means 'How are things going?' or 'How are you?'.",
+q3:"'It's been an absolute age' adds a dramatic, warm emphasis on how long it has been since you last saw the person.",
+q4:"In regions like the UK, 'Alright?' functions as a passing acknowledgment rather than an invitation to chat. Giving a quick nod and repeating it back is the standard response.",
+q5:"This phrase establishes polite, corporate rapport before transitioning into business details smoothly.",
+q6:"To 'hold up' refers to surviving or coping with stress, grief, or a tough period, making this an empathetic greeting.",
+q7:"'In the flesh' means meeting physically in real life, typically after interacting strictly via email or video calls.",
+q8:"While 'To Whom It May Concern' is okay, modern professional writing prefers targeting a specific title, making 'Dear Hiring Manager' the best fit.",
+q9:"'What have you been up to?' asks for a summary of your recent activities, so sharing a brief update about work or life is appropriate.",
+q10:"'What a pleasant surprise!' immediately frames their unannounced arrival as a positive event.",
+q11:"This phrase is an industry-standard, polite introductory formula used in professional emails.",
+q12:"'Give my best to...' is an idiom used to send kind thoughts and greetings to loved ones who are not present.",
+q13:"Saying 'Nice to meet you' to someone you already know implies you forgot them. 'Great to see you again' perfectly validates your shared history.",
+q14:"'Take care' is a gentle, warm way of closing a conversation by wishing someone safety and physical well-being.",
+q15:"This closing shows appreciation for the participants' time and sets a collaborative expectation for the future."
+};
+
+let selectedAnswers = {};
+
+function selectAnswer(q, ans, el){
+    selectedAnswers[q] = ans;
+    let options = el.parentNode.querySelectorAll(".option");
+    options.forEach(o => o.classList.remove("selected"));
+    el.classList.add("selected");
+}
+
+const correctSound = new Audio("https://www.soundjay.com/buttons/sounds/button-4.mp3");
+const wrongSound = new Audio("https://www.soundjay.com/buttons/sounds/button-10.mp3");
+
+function submitQuiz(){
+    let name = document.getElementById("name").value;
+    let cls = document.getElementById("class").value;
+
+    if (!name || !cls) {
+        alert("Please fill in your Name and Class before submitting!");
+        return;
+    }
+
+    let score = 0;
+    let output = "";
+
+    for(let i=1;i<=15;i++){
+        if(selectedAnswers["q"+i] === answers["q"+i]){
+            score++;
+            correctSound.play();
+            output += `<p>✔ Q${i}: Correct - ${explanations["q"+i]}</p>`;
+        }else{
+            wrongSound.play();
+            output += `<p>❌ Q${i}: Wrong - ${explanations["q"+i]}</p>`;
+        }
+    }
+
+    let time = new Date().toLocaleString();
+
+    document.getElementById("result").innerHTML = `
+    <h3>🎯 Result</h3>
+    Name: ${name}<br>
+    Class: ${cls}<br>
+    Score: ${score}/15<br>
+    Time: ${time}<br>
+    <span id="save-status" style="color: #f39c12; font-weight: bold; margin-top:10px; display:inline-block;">🔄 Saving your score globally...</span>
+    `;
+
+    showPopup(output);
+
+    let dataToSave = {
+        quizType: "greetings2",
+        name: name,
+        class: cls,
+        score: score,
+        time: time
+    };
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "text/plain"
+        },
+        body: JSON.stringify(dataToSave)
+    })
+    .then(response => response.json())
+    .then(data => {
+        let statusEl = document.getElementById("save-status");
+        if(data.result === "success") {
+            statusEl.innerHTML = "✔️ Score saved globally!";
+            statusEl.style.color = "#2ecc71";
+            // Refresh the leaderboard to show their newly added score!
+            loadRanking();
+        } else {
+            statusEl.innerHTML = "❌ Failed to save score.";
+            statusEl.style.color = "red";
+        }
+    })
+    .catch(error => {
+        let statusEl = document.getElementById("save-status");
+        statusEl.innerHTML = "❌ Error connecting to server.";
+        statusEl.style.color = "red";
+        console.error("Fetch error:", error);
+    });
+}
+
+// FETCH GLOBAL LEADERBOARD FROM GOOGLE SHEETS
+function loadRanking(){
+    let table = document.getElementById("ranking");
+    table.innerHTML = "<tr><td colspan='5' style='text-align:center;'>Loading Leaderboard... 🌍</td></tr>";
+
+    // Call the server with a GET request specifically asking for greetings2 data
+    fetch(SCRIPT_URL + "?quizType=greetings2")
+    .then(response => response.json())
+    .then(data => {
+        if(data.result === "success") {
+            table.innerHTML = "";
+            let ranking = data.data;
+            
+            if(ranking.length === 0) {
+                table.innerHTML = "<tr><td colspan='5' style='text-align:center;'>No scores yet. Be the first!</td></tr>";
+                return;
+            }
+
+            ranking.forEach((r,index)=>{
+                let badge = "";
+                if(index===0) badge="🥇 GOLD";
+                else if(index===1) badge="🥈 SILVER";
+                else if(index===2) badge="🥉 BRONZE";
+                else badge="—";
+
+                table.innerHTML += `
+                <tr>
+                <td>${badge}</td>
+                <td>${r.name}</td>
+                <td>${r.class}</td>
+                <td>${r.score}</td>
+                <td>${r.time}</td>
+                </tr>`;
+            });
+        } else {
+            table.innerHTML = "<tr><td colspan='5' style='text-align:center;color:red;'>Failed to load scores.</td></tr>";
+        }
+    })
+    .catch(error => {
+        table.innerHTML = "<tr><td colspan='5' style='text-align:center;color:red;'>Error fetching leaderboard.</td></tr>";
+        console.error("Leaderboard fetch error:", error);
+    });
+}
+
+function showPopup(html){
+    document.getElementById("explanations").innerHTML = html;
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup(){
+    document.getElementById("popup").style.display = "none";
+}
+
+// Load the global ranking as soon as the page opens!
+loadRanking();
+
+</script>
+
+</body>
+</html>
+for greetings 2 the name is intermediate english
+
+To route the "greetings2" quiz results to a new tab named Intermediate English, you only need to update your Google Apps Script and rename a tab in your spreadsheet. Your index.html file is already perfectly set up to send the "greetings2" identifier!
+
+Here is exactly how to update your backend to match this new tab name:
+
+Step 1: Update Your Spreadsheet Tab
+Open your Google Spreadsheet.
+
+Click the + button at the bottom left to add a new sheet (if you haven't already).
+
+Rename this specific tab exactly: Intermediate English
+
+Make sure Row 1 of this new tab has your headers: Name, Class, Score, and Time.
+
+Step 2: Update Your Google Apps Script
+Go to Extensions > Apps Script in your spreadsheet.
+
+Replace your current script with this updated version. It now specifically separates "greetings2" into the "Intermediate English" tab, while keeping "greetings" (your beginner quiz) pointing to the "Greetings Quiz" tab.
+
+JavaScript
+// This function SAVES data to the sheet
+function doPost(e) {
+  try {
+    var data = JSON.parse(e.postData.contents);
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var sheet;
+    
+    // Route to the correct tab based on the quizType
+    if (data.quizType === "greetings2") {
+      sheet = ss.getSheetByName("Intermediate English");
+    } else if (data.quizType === "greetings") {
+      sheet = ss.getSheetByName("Greetings Quiz");
+    } else if (data.quizType === "offering_help") {
+      sheet = ss.getSheetByName("Offering Help");
+    } else {
+      sheet = ss.getSheets()[0];
+    }
+    
+    // Safety fallback
+    if (!sheet) {
+      sheet = ss.getSheets()[0];
+    }
+    
+    // Save the new score
+    sheet.appendRow([data.name, data.class, data.score, data.time]);
+    
+    return ContentService.createTextOutput(JSON.stringify({"result": "success"}))
+                         .setMimeType(ContentService.MimeType.JSON);
+                         
+  } catch (error) {
+    return ContentService.createTextOutput(JSON.stringify({"result": "error", "error": error.toString()}))
+                         .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+// This function FETCHES the leaderboard data for everyone to see
+function doGet(e) {
+  try {
+    var quizType = e.parameter.quizType;
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var sheet;
+    
+    // Read from the correct tab based on the quizType
+    if (quizType === "greetings2") {
+      sheet = ss.getSheetByName("Intermediate English");
+    } else if (quizType === "greetings") {
+      sheet = ss.getSheetByName("Greetings Quiz");
+    } else if (quizType === "offering_help") {
+      sheet = ss.getSheetByName("Offering Help");
+    } else {
+      sheet = ss.getSheets()[0];
+    }
+    
+    // Safety fallback
+    if (!sheet) sheet = ss.getSheets()[0];
+    
+    var data = sheet.getDataRange().getValues();
+    var leaderboard = [];
+    
+    // Start at index 1 to skip the header row
+    for (var i = 1; i < data.length; i++) {
+      if (data[i][0] !== "") { 
+        leaderboard.push({
+          name: data[i][0],
+          class: data[i][1],
+          score: Number(data[i][2]),
+          time: data[i][3]
+        });
+      }
+    }
+    
+    // Sort from highest score to lowest
+    leaderboard.sort(function(a, b) {
+      return b.score - a.score;
+    });
+    
+    // Return the sorted data to the website
+    return ContentService.createTextOutput(JSON.stringify({"result": "success", "data": leaderboard}))
+                         .setMimeType(ContentService.MimeType.JSON);
+                         
+  } catch (error) {
+    return ContentService.createTextOutput(JSON.stringify({"result": "error", "error": error.toString()}))
+                         .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+Step 3: Redeploy the Script (Crucial!)
+Google Apps Script will not use your new code until you deploy it as a new version.
+
+Click the blue Deploy button at the top right.
+
+Select Manage deployments.
+
+Click the pencil icon (Edit) next to your active deployment.
+
+Under the Version dropdown, change it to New version.
+
+Click Deploy.
+
+Your Intermediate Quiz will now save high scores directly to the "Intermediate English" tab and display them on the global leaderboard!
+
+also change the html
+
+Here is the completely updated index.html code. I have updated the titles to Intermediate English Quiz to match your new naming convention perfectly, while keeping the quizType: "greetings2" tag so it communicates flawlessly with your new spreadsheet tab.
+
+You can copy and paste this entire block directly into your file:
+
+HTML
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -278,7 +2698,7 @@ button{
 <script>
 
 // YOUR GOOGLE SHEETS SCRIPT URL
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxa7PgK5zJe0OegGhpNzr6wC6wgPMRLADYKasm5JIIyBcF7GzPe5jBxZmm9tKZtf9Q/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxNy0INk-z1jDesKlPZhfWD-5H30Pd0BGPcgcXZ99vBcPbFByPt5x21YTyjnKvWpz4s/exec";
 
 // ANSWERS & EXPLANATIONS
 const answers = {
@@ -449,3 +2869,2555 @@ loadRanking();
 
 </body>
 </html>
+is this code let everyone see the leaderboard?
+
+Yes, exactly! The code provided in the last step completely shifts the leaderboard from being private (stored on the individual's device) to being global and public.
+
+Here is exactly how it works:
+
+No More Local Storage: The old code used localStorage, meaning a student could only see their own scores. The new code removes that entirely.
+
+Live Fetching: When someone opens the page, the loadRanking() function automatically sends a request to your Google Apps Script (fetch(SCRIPT_URL + "?quizType=greetings2")).
+
+Global Sync: Your Google Apps Script reads the live "Intermediate English" tab in your Google Spreadsheet, sorts the scores from highest to lowest, and sends them right back to the website.
+
+Real-time Updates: Every time a user submits a new quiz, it saves their score to the spreadsheet and immediately re-downloads the updated leaderboard so they can see exactly where they rank against everyone else in the world.
+
+⚠️ One Important Check
+For this to work flawlessly, ensure that when you deployed your Google Apps Script, you set "Who has access" to "Anyone". If it is restricted, the website won't have permission to read the spreadsheet and the leaderboard will stay stuck on "Loading Leaderboard... 🌍".
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>English Help Expressions Quiz</title>
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+
+<style>
+
+body{
+
+    font-family:'Poppins', sans-serif;
+
+    margin:0;
+
+    background: linear-gradient(135deg,#74ebd5,#9face6);
+
+}
+
+
+
+.container{
+
+    max-width:900px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+}
+
+
+
+h1{text-align:center;}
+
+
+
+input{
+
+    width:100%;
+
+    padding:10px;
+
+    margin:5px 0 10px 0;
+
+    border-radius:8px;
+
+    border:1px solid #ccc;
+
+}
+
+
+
+/* QUESTION STYLE */
+
+.question{
+
+    background:#f8f9ff;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+    border-left:6px solid #6c63ff;
+
+    border-radius:10px;
+
+}
+
+
+
+/* CLICKABLE OPTIONS */
+
+.option{
+
+    display:block;
+
+    padding:10px;
+
+    margin:6px 0;
+
+    border:2px solid #ddd;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:0.2s;
+
+    background:white;
+
+}
+
+
+
+.option:hover{
+
+    border-color:#6c63ff;
+
+    transform:scale(1.02);
+
+}
+
+
+
+.option.selected{
+
+    background:#6c63ff;
+
+    color:white;
+
+    border-color:#6c63ff;
+
+}
+
+
+
+button{
+
+    width:100%;
+
+    padding:12px;
+
+    background:#6c63ff;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+
+
+/* RESULT */
+
+.result{
+
+    margin-top:15px;
+
+    padding:15px;
+
+    background:#eaffea;
+
+    border-left:6px solid #2ecc71;
+
+    border-radius:10px;
+
+}
+
+
+
+/* POPUP */
+
+#popup{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;left:0;
+
+    width:100%;height:100%;
+
+    background:rgba(0,0,0,0.6);
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.popup-content{
+
+    background:white;
+
+    padding:20px;
+
+    width:85%;
+
+    max-width:650px;
+
+    border-radius:12px;
+
+    max-height:80%;
+
+    overflow-y:auto;
+
+}
+
+
+
+.close-btn{
+
+    background:red;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 12px;
+
+    float:right;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="container">
+
+
+
+<h1>🌟 English Help Expressions Quiz</h1>
+
+
+
+<input id="name" placeholder="Name">
+
+<input id="class" placeholder="Class">
+
+
+
+<!-- QUESTIONS (UNCHANGED CONTENT) -->
+
+
+
+<div class="question">
+
+1. “Can you help me?” is an expression of ____.
+
+<div class="option" onclick="selectAnswer('q1','a',this)">A. greeting</div>
+
+<div class="option" onclick="selectAnswer('q1','b',this)">B. asking for help</div>
+
+<div class="option" onclick="selectAnswer('q1','c',this)">C. apologizing</div>
+
+<div class="option" onclick="selectAnswer('q1','d',this)">D. giving opinion</div>
+
+</div>
+
+
+
+<div class="question">
+
+2. Which expression offers help?
+
+<div class="option" onclick="selectAnswer('q2','a',this)">A. Let me help you</div>
+
+<div class="option" onclick="selectAnswer('q2','b',this)">B. I disagree</div>
+
+<div class="option" onclick="selectAnswer('q2','c',this)">C. Good night</div>
+
+<div class="option" onclick="selectAnswer('q2','d',this)">D. Turn left</div>
+
+</div>
+
+
+
+<div class="question">
+
+3. “Would you mind helping me?” is ____.
+
+<div class="option" onclick="selectAnswer('q3','a',this)">A. rude</div>
+
+<div class="option" onclick="selectAnswer('q3','b',this)">B. polite</div>
+
+<div class="option" onclick="selectAnswer('q3','c',this)">C. angry</div>
+
+<div class="option" onclick="selectAnswer('q3','d',this)">D. informal</div>
+
+</div>
+
+
+
+<div class="question">
+
+4. A: “My books are very heavy.” B: “____”
+
+<div class="option" onclick="selectAnswer('q4','a',this)">A. I’m sorry</div>
+
+<div class="option" onclick="selectAnswer('q4','b',this)">B. Let me carry them for you</div>
+
+<div class="option" onclick="selectAnswer('q4','c',this)">C. Goodbye</div>
+
+<div class="option" onclick="selectAnswer('q4','d',this)">D. I disagree</div>
+
+</div>
+
+
+
+<div class="question">
+
+5. Which sentence asks for help politely?
+
+<div class="option" onclick="selectAnswer('q5','a',this)">A. Help me now!</div>
+
+<div class="option" onclick="selectAnswer('q5','b',this)">B. Could you help me, please?</div>
+
+<div class="option" onclick="selectAnswer('q5','c',this)">C. Give me that!</div>
+
+<div class="option" onclick="selectAnswer('q5','d',this)">D. Be quiet!</div>
+
+</div>
+
+
+
+<div class="question">
+
+6. “Do you need any help?” means ____.
+
+<div class="option" onclick="selectAnswer('q6','a',this)">A. asking for opinion</div>
+
+<div class="option" onclick="selectAnswer('q6','b',this)">B. offering assistance</div>
+
+<div class="option" onclick="selectAnswer('q6','c',this)">C. apologizing</div>
+
+<div class="option" onclick="selectAnswer('q6','d',this)">D. greeting someone</div>
+
+</div>
+
+
+
+<div class="question">
+
+7. Which response accepts help?
+
+<div class="option" onclick="selectAnswer('q7','a',this)">A. No problem</div>
+
+<div class="option" onclick="selectAnswer('q7','b',this)">B. Yes, please</div>
+
+<div class="option" onclick="selectAnswer('q7','c',this)">C. I forgive you</div>
+
+<div class="option" onclick="selectAnswer('q7','d',this)">D. Turn right</div>
+
+</div>
+
+
+
+<div class="question">
+
+8. Which response refuses help politely?
+
+<div class="option" onclick="selectAnswer('q8','a',this)">A. Go away</div>
+
+<div class="option" onclick="selectAnswer('q8','b',this)">B. No, thank you</div>
+
+<div class="option" onclick="selectAnswer('q8','c',this)">C. Be quiet</div>
+
+<div class="option" onclick="selectAnswer('q8','d',this)">D. I disagree</div>
+
+</div>
+
+
+
+<div class="question">
+
+9. A helpful person usually ____.
+
+<div class="option" onclick="selectAnswer('q9','a',this)">A. ignores others</div>
+
+<div class="option" onclick="selectAnswer('q9','b',this)">B. offers assistance</div>
+
+<div class="option" onclick="selectAnswer('q9','c',this)">C. gets angry easily</div>
+
+<div class="option" onclick="selectAnswer('q9','d',this)">D. lies often</div>
+
+</div>
+
+
+
+<div class="question">
+
+10. Which expression is the most polite?
+
+<div class="option" onclick="selectAnswer('q10','a',this)">A. Help me!</div>
+
+<div class="option" onclick="selectAnswer('q10','b',this)">B. Could you please help me?</div>
+
+<div class="option" onclick="selectAnswer('q10','c',this)">C. Carry this!</div>
+
+<div class="option" onclick="selectAnswer('q10','d',this)">D. Move!</div>
+
+</div>
+
+
+
+<button onclick="submitQuiz()">Submit Quiz</button>
+
+
+
+<div class="result" id="result"></div>
+
+
+
+<h2>🏆 Leaderboard</h2>
+
+<table border="1" width="100%">
+
+<tr>
+
+<th>Rank</th>
+
+<th>Name</th>
+
+<th>Class</th>
+
+<th>Score</th>
+
+<th>Time</th>
+
+</tr>
+
+<tbody id="ranking"></tbody>
+
+</table>
+
+
+
+</div>
+
+
+
+<!-- POPUP -->
+
+<div id="popup">
+
+<div class="popup-content">
+
+<button class="close-btn" onclick="closePopup()">X</button>
+
+<h2>📘 Explanations</h2>
+
+<div id="explanations"></div>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+
+
+// ANSWERS
+
+const answers = {
+
+q1:"b", q2:"a", q3:"b", q4:"b", q5:"b",
+
+q6:"b", q7:"b", q8:"b", q9:"b", q10:"b"
+
+};
+
+
+
+// EXPLANATIONS
+
+const explanations = {
+
+q1:"Asking for help.",
+
+q2:"Offering help.",
+
+q3:"Polite expression.",
+
+q4:"Offering to carry books.",
+
+q5:"Polite request.",
+
+q6:"Offering assistance.",
+
+q7:"Accepting help.",
+
+q8:"Polite refusal.",
+
+q9:"Helpful people assist others.",
+
+q10:"Most polite form of request."
+
+};
+
+
+
+// SELECTED ANSWERS
+
+let selectedAnswers = {};
+
+
+
+function selectAnswer(q, ans, el){
+
+
+
+selectedAnswers[q] = ans;
+
+
+
+let options = el.parentNode.querySelectorAll(".option");
+
+options.forEach(o => o.classList.remove("selected"));
+
+
+
+el.classList.add("selected");
+
+}
+
+
+
+// SOUND
+
+const correctSound = new Audio("https://www.soundjay.com/buttons/sounds/button-4.mp3");
+
+const wrongSound = new Audio("https://www.soundjay.com/buttons/sounds/button-10.mp3");
+
+
+
+function submitQuiz(){
+
+
+
+let name = document.getElementById("name").value;
+
+let cls = document.getElementById("class").value;
+
+
+
+if (!name || !cls) {
+
+    alert("Please fill in your Name and Class before submitting!");
+
+    return;
+
+}
+
+
+
+let score = 0;
+
+let output = "";
+
+
+
+for(let i=1;i<=10;i++){
+
+
+
+if(selectedAnswers["q"+i] === answers["q"+i]){
+
+score++;
+
+correctSound.play();
+
+output += `<p>✔ Q${i}: Correct - ${explanations["q"+i]}</p>`;
+
+}else{
+
+wrongSound.play();
+
+output += `<p>❌ Q${i}: Wrong - ${explanations["q"+i]}</p>`;
+
+}
+
+}
+
+
+
+let time = new Date().toLocaleString();
+
+
+
+// SAVE RANKING LOKAL (agar tetap muncul di halaman)
+
+let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
+
+ranking.push({name, class:cls, score, time});
+
+localStorage.setItem("ranking", JSON.stringify(ranking));
+
+
+
+loadRanking();
+
+
+
+// UPDATE TAMPILAN RESULT
+
+document.getElementById("result").innerHTML = `
+
+<h3>🎯 Result</h3>
+
+Name: ${name}<br>
+
+Class: ${cls}<br>
+
+Score: ${score}/10<br>
+
+Time: ${time}<br>
+
+<span id="save-status" style="color: #f39c12; font-weight: bold; margin-top:10px; display:inline-block;">🔄 Saving to Server/Excel...</span>
+
+`;
+
+
+
+showPopup(output);
+
+
+
+// SEND TO GOOGLE SHEETS API
+
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxa7PgK5zJe0OegGhpNzr6wC6wgPMRLADYKasm5JIIyBcF7GzPe5jBxZmm9tKZtf9Q/exec";
+
+
+
+// Change this section in your Offering Help Quiz index.html
+
+let dataToSave = {
+
+    quizType: "offering_help", 
+
+    name: name,
+
+    class: cls,
+
+    score: score,
+
+    time: time
+
+};
+
+
+
+fetch(SCRIPT_URL, {
+
+    method: "POST",
+
+    headers: {
+
+        "Content-Type": "text/plain" // text/plain digunakan agar tidak terkena pemblokiran CORS dari Google
+
+    },
+
+    body: JSON.stringify(dataToSave)
+
+})
+
+.then(response => response.json())
+
+.then(data => {
+
+    let statusEl = document.getElementById("save-status");
+
+    if(data.result === "success") {
+
+        statusEl.innerHTML = "✔️ Saved to Excel successfully!";
+
+        statusEl.style.color = "#2ecc71";
+
+    } else {
+
+        statusEl.innerHTML = "❌ Failed to save to Excel.";
+
+        statusEl.style.color = "red";
+
+    }
+
+})
+
+.catch(error => {
+
+    let statusEl = document.getElementById("save-status");
+
+    statusEl.innerHTML = "❌ Error connecting to server.";
+
+    statusEl.style.color = "red";
+
+    console.error("Fetch error:", error);
+
+});
+
+}
+
+
+
+// LEADERBOARD
+
+function loadRanking(){
+
+let ranking = JSON.parse(localStorage.getItem("ranking")) || [];
+
+ranking.sort((a,b)=>b.score - a.score);
+
+
+
+let table = document.getElementById("ranking");
+
+table.innerHTML = "";
+
+
+
+ranking.forEach((r,index)=>{
+
+
+
+let badge = "";
+
+if(index===0) badge="🥇 GOLD";
+
+else if(index===1) badge="🥈 SILVER";
+
+else if(index===2) badge="🥉 BRONZE";
+
+else badge="—";
+
+
+
+table.innerHTML += `
+
+<tr>
+
+<td>${badge}</td>
+
+<td>${r.name}</td>
+
+<td>${r.class}</td>
+
+<td>${r.score}</td>
+
+<td>${r.time}</td>
+
+</tr>`;
+
+});
+
+}
+
+
+
+function showPopup(html){
+
+document.getElementById("explanations").innerHTML = html;
+
+document.getElementById("popup").style.display = "flex";
+
+}
+
+
+
+function closePopup(){
+
+document.getElementById("popup").style.display = "none";
+
+}
+
+
+
+loadRanking();
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
+
+
+
+also change this code leaderboard to be seen globally
+
+Here is the completely updated code for your English Help Expressions Quiz.
+
+I have removed the local storage limit and upgraded the loadRanking() function to securely fetch the live scores from your Google Spreadsheet using the ?quizType=offering_help identifier. Now, whenever someone finishes the quiz, it will instantly save their score and refresh the leaderboard so everyone around the world can see the top ranks!
+
+HTML
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>English Help Expressions Quiz</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    font-family:'Poppins', sans-serif;
+    margin:0;
+    background: linear-gradient(135deg,#74ebd5,#9face6);
+}
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+}
+
+h1{text-align:center;}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:5px 0 10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+/* QUESTION STYLE */
+.question{
+    background:#f8f9ff;
+    padding:15px;
+    margin-bottom:15px;
+    border-left:6px solid #6c63ff;
+    border-radius:10px;
+}
+
+/* CLICKABLE OPTIONS */
+.option{
+    display:block;
+    padding:10px;
+    margin:6px 0;
+    border:2px solid #ddd;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.2s;
+    background:white;
+}
+
+.option:hover{
+    border-color:#6c63ff;
+    transform:scale(1.02);
+}
+
+.option.selected{
+    background:#6c63ff;
+    color:white;
+    border-color:#6c63ff;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#6c63ff;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* RESULT */
+.result{
+    margin-top:15px;
+    padding:15px;
+    background:#eaffea;
+    border-left:6px solid #2ecc71;
+    border-radius:10px;
+}
+
+/* POPUP */
+#popup{
+    display:none;
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-content{
+    background:white;
+    padding:20px;
+    width:85%;
+    max-width:650px;
+    border-radius:12px;
+    max-height:80%;
+    overflow-y:auto;
+}
+
+.close-btn{
+    background:red;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    float:right;
+    border-radius:8px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌟 English Help Expressions Quiz</h1>
+
+<input id="name" placeholder="Name">
+<input id="class" placeholder="Class">
+
+<!-- QUESTIONS -->
+
+<div class="question">
+1. “Can you help me?” is an expression of ____.
+<div class="option" onclick="selectAnswer('q1','a',this)">A. greeting</div>
+<div class="option" onclick="selectAnswer('q1','b',this)">B. asking for help</div>
+<div class="option" onclick="selectAnswer('q1','c',this)">C. apologizing</div>
+<div class="option" onclick="selectAnswer('q1','d',this)">D. giving opinion</div>
+</div>
+
+<div class="question">
+2. Which expression offers help?
+<div class="option" onclick="selectAnswer('q2','a',this)">A. Let me help you</div>
+<div class="option" onclick="selectAnswer('q2','b',this)">B. I disagree</div>
+<div class="option" onclick="selectAnswer('q2','c',this)">C. Good night</div>
+<div class="option" onclick="selectAnswer('q2','d',this)">D. Turn left</div>
+</div>
+
+<div class="question">
+3. “Would you mind helping me?” is ____.
+<div class="option" onclick="selectAnswer('q3','a',this)">A. rude</div>
+<div class="option" onclick="selectAnswer('q3','b',this)">B. polite</div>
+<div class="option" onclick="selectAnswer('q3','c',this)">C. angry</div>
+<div class="option" onclick="selectAnswer('q3','d',this)">D. informal</div>
+</div>
+
+<div class="question">
+4. A: “My books are very heavy.” B: “____”
+<div class="option" onclick="selectAnswer('q4','a',this)">A. I’m sorry</div>
+<div class="option" onclick="selectAnswer('q4','b',this)">B. Let me carry them for you</div>
+<div class="option" onclick="selectAnswer('q4','c',this)">C. Goodbye</div>
+<div class="option" onclick="selectAnswer('q4','d',this)">D. I disagree</div>
+</div>
+
+<div class="question">
+5. Which sentence asks for help politely?
+<div class="option" onclick="selectAnswer('q5','a',this)">A. Help me now!</div>
+<div class="option" onclick="selectAnswer('q5','b',this)">B. Could you help me, please?</div>
+<div class="option" onclick="selectAnswer('q5','c',this)">C. Give me that!</div>
+<div class="option" onclick="selectAnswer('q5','d',this)">D. Be quiet!</div>
+</div>
+
+<div class="question">
+6. “Do you need any help?” means ____.
+<div class="option" onclick="selectAnswer('q6','a',this)">A. asking for opinion</div>
+<div class="option" onclick="selectAnswer('q6','b',this)">B. offering assistance</div>
+<div class="option" onclick="selectAnswer('q6','c',this)">C. apologizing</div>
+<div class="option" onclick="selectAnswer('q6','d',this)">D. greeting someone</div>
+</div>
+
+<div class="question">
+7. Which response accepts help?
+<div class="option" onclick="selectAnswer('q7','a',this)">A. No problem</div>
+<div class="option" onclick="selectAnswer('q7','b',this)">B. Yes, please</div>
+<div class="option" onclick="selectAnswer('q7','c',this)">C. I forgive you</div>
+<div class="option" onclick="selectAnswer('q7','d',this)">D. Turn right</div>
+</div>
+
+<div class="question">
+8. Which response refuses help politely?
+<div class="option" onclick="selectAnswer('q8','a',this)">A. Go away</div>
+<div class="option" onclick="selectAnswer('q8','b',this)">B. No, thank you</div>
+<div class="option" onclick="selectAnswer('q8','c',this)">C. Be quiet</div>
+<div class="option" onclick="selectAnswer('q8','d',this)">D. I disagree</div>
+</div>
+
+<div class="question">
+9. A helpful person usually ____.
+<div class="option" onclick="selectAnswer('q9','a',this)">A. ignores others</div>
+<div class="option" onclick="selectAnswer('q9','b',this)">B. offers assistance</div>
+<div class="option" onclick="selectAnswer('q9','c',this)">C. gets angry easily</div>
+<div class="option" onclick="selectAnswer('q9','d',this)">D. lies often</div>
+</div>
+
+<div class="question">
+10. Which expression is the most polite?
+<div class="option" onclick="selectAnswer('q10','a',this)">A. Help me!</div>
+<div class="option" onclick="selectAnswer('q10','b',this)">B. Could you please help me?</div>
+<div class="option" onclick="selectAnswer('q10','c',this)">C. Carry this!</div>
+<div class="option" onclick="selectAnswer('q10','d',this)">D. Move!</div>
+</div>
+
+<button onclick="submitQuiz()">Submit Quiz</button>
+
+<div class="result" id="result"></div>
+
+<h2>🏆 Global Online Leaderboard</h2>
+<table border="1" width="100%">
+<tr>
+<th>Rank</th>
+<th>Name</th>
+<th>Class</th>
+<th>Score</th>
+<th>Time</th>
+</tr>
+<tbody id="ranking">
+<tr><td colspan='5' style='text-align:center;'>Loading Leaderboard... 🌍</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<!-- POPUP -->
+<div id="popup">
+<div class="popup-content">
+<button class="close-btn" onclick="closePopup()">X</button>
+<h2>📘 Explanations</h2>
+<div id="explanations"></div>
+</div>
+</div>
+
+<script>
+
+// ANSWERS
+const answers = {
+q1:"b", q2:"a", q3:"b", q4:"b", q5:"b",
+q6:"b", q7:"b", q8:"b", q9:"b", q10:"b"
+};
+
+// EXPLANATIONS
+const explanations = {
+q1:"Asking for help.",
+q2:"Offering help.",
+q3:"Polite expression.",
+q4:"Offering to carry books.",
+q5:"Polite request.",
+q6:"Offering assistance.",
+q7:"Accepting help.",
+q8:"Polite refusal.",
+q9:"Helpful people assist others.",
+q10:"Most polite form of request."
+};
+
+// YOUR GOOGLE SHEETS SCRIPT URL
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxa7PgK5zJe0OegGhpNzr6wC6wgPMRLADYKasm5JIIyBcF7GzPe5jBxZmm9tKZtf9Q/exec";
+
+// SELECTED ANSWERS
+let selectedAnswers = {};
+
+function selectAnswer(q, ans, el){
+    selectedAnswers[q] = ans;
+    let options = el.parentNode.querySelectorAll(".option");
+    options.forEach(o => o.classList.remove("selected"));
+    el.classList.add("selected");
+}
+
+// SOUND
+const correctSound = new Audio("https://www.soundjay.com/buttons/sounds/button-4.mp3");
+const wrongSound = new Audio("https://www.soundjay.com/buttons/sounds/button-10.mp3");
+
+function submitQuiz(){
+    let name = document.getElementById("name").value;
+    let cls = document.getElementById("class").value;
+
+    if (!name || !cls) {
+        alert("Please fill in your Name and Class before submitting!");
+        return;
+    }
+
+    let score = 0;
+    let output = "";
+
+    for(let i=1;i<=10;i++){
+        if(selectedAnswers["q"+i] === answers["q"+i]){
+            score++;
+            correctSound.play();
+            output += `<p>✔ Q${i}: Correct - ${explanations["q"+i]}</p>`;
+        }else{
+            wrongSound.play();
+            output += `<p>❌ Q${i}: Wrong - ${explanations["q"+i]}</p>`;
+        }
+    }
+
+    let time = new Date().toLocaleString();
+
+    // UPDATE TAMPILAN RESULT
+    document.getElementById("result").innerHTML = `
+    <h3>🎯 Result</h3>
+    Name: ${name}<br>
+    Class: ${cls}<br>
+    Score: ${score}/10<br>
+    Time: ${time}<br>
+    <span id="save-status" style="color: #f39c12; font-weight: bold; margin-top:10px; display:inline-block;">🔄 Saving your score globally...</span>
+    `;
+
+    showPopup(output);
+
+    let dataToSave = {
+        quizType: "offering_help", 
+        name: name,
+        class: cls,
+        score: score,
+        time: time
+    };
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "text/plain" 
+        },
+        body: JSON.stringify(dataToSave)
+    })
+    .then(response => response.json())
+    .then(data => {
+        let statusEl = document.getElementById("save-status");
+        if(data.result === "success") {
+            statusEl.innerHTML = "✔️ Score saved globally!";
+            statusEl.style.color = "#2ecc71";
+            // Refresh the leaderboard to show the newly added score
+            loadRanking();
+        } else {
+            statusEl.innerHTML = "❌ Failed to save score.";
+            statusEl.style.color = "red";
+        }
+    })
+    .catch(error => {
+        let statusEl = document.getElementById("save-status");
+        statusEl.innerHTML = "❌ Error connecting to server.";
+        statusEl.style.color = "red";
+        console.error("Fetch error:", error);
+    });
+}
+
+// FETCH GLOBAL LEADERBOARD FROM GOOGLE SHEETS
+function loadRanking(){
+    let table = document.getElementById("ranking");
+    table.innerHTML = "<tr><td colspan='5' style='text-align:center;'>Loading Leaderboard... 🌍</td></tr>";
+
+    // Call the server with a GET request specifically asking for offering_help data
+    fetch(SCRIPT_URL + "?quizType=offering_help")
+    .then(response => response.json())
+    .then(data => {
+        if(data.result === "success") {
+            table.innerHTML = "";
+            let ranking = data.data;
+            
+            if(ranking.length === 0) {
+                table.innerHTML = "<tr><td colspan='5' style='text-align:center;'>No scores yet. Be the first!</td></tr>";
+                return;
+            }
+
+            ranking.forEach((r,index)=>{
+                let badge = "";
+                if(index===0) badge="🥇 GOLD";
+                else if(index===1) badge="🥈 SILVER";
+                else if(index===2) badge="🥉 BRONZE";
+                else badge="—";
+
+                table.innerHTML += `
+                <tr>
+                <td>${badge}</td>
+                <td>${r.name}</td>
+                <td>${r.class}</td>
+                <td>${r.score}</td>
+                <td>${r.time}</td>
+                </tr>`;
+            });
+        } else {
+            table.innerHTML = "<tr><td colspan='5' style='text-align:center;color:red;'>Failed to load scores.</td></tr>";
+        }
+    })
+    .catch(error => {
+        table.innerHTML = "<tr><td colspan='5' style='text-align:center;color:red;'>Error fetching leaderboard.</td></tr>";
+        console.error("Leaderboard fetch error:", error);
+    });
+}
+
+function showPopup(html){
+    document.getElementById("explanations").innerHTML = html;
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup(){
+    document.getElementById("popup").style.display = "none";
+}
+
+// Load the global ranking as soon as the page opens!
+loadRanking();
+
+</script>
+
+</body>
+</html>
+hai gemini bisakah kmau membantuku
+
+Halo! Tentu saja, saya siap membantu. Apa yang ingin kamu diskusikan atau tanyakan hari ini? Silakan beri tahu saya!
+
+jadi aku punya tugas untuk membuat quiz dengan materi
+
+asking and offering help
+
+Asking and Giving Direction
+
+Tentu saja! Wah, tugas yang menarik. Kombinasi kedua materi ini sangat bagus karena sangat praktis dan sering digunakan dalam percakapan sehari-hari.
+
+Sebagai langkah awal, aku sudah menyusun draf 15 soal pilihan ganda yang memadukan materi Asking & Offering Help serta Asking & Giving Direction. Soal-soal ini dirancang dengan tingkat kesulitan menengah dan cocok untuk tugas sekolah.
+
+Berikut adalah daftar soal, pilihan ganda, kunci jawaban, dan penjelasannya:
+
+🤝 Bagian 1: Asking and Offering Help (Meminta & Menawarkan Bantuan)
+1. You see an old lady trying to cross a busy street. What is the best expression to offer help?
+
+A. Do you want to help me?
+
+B. Can you help me cross the street?
+
+C. Would you like me to help you cross the street?
+
+D. Get out of the way!
+
+Jawaban: C (Menawarkan bantuan dengan sopan).
+
+2. A: "I'm having a lot of trouble with this math homework."
+B: "_____"
+
+A. I don't care.
+
+B. Do you want me to help you with it?
+
+C. You should help me.
+
+D. Are you okay?
+
+Jawaban: B (Merespons pernyataan kesulitan dengan menawarkan bantuan).
+
+3. If someone offers you help but you can do it yourself, what is the most polite way to refuse?
+
+A. No, I don't need you.
+
+B. Go away, I can do it.
+
+C. Yes, please.
+
+D. No, thank you. I can manage it myself.
+
+Jawaban: D (Menolak bantuan secara halus dan sopan).
+
+4. "Can you give me a hand with these heavy boxes?" This expression is used to...
+
+A. Offer help
+
+B. Ask for help
+
+C. Ask for direction
+
+D. Give an opinion
+
+Jawaban: B (Idiom "give me a hand" berarti meminta bantuan).
+
+5. A: "Would you mind printing this document for me?"
+B: "_____, I'll do it right away."
+
+A. Not at all
+
+B. Yes, I mind
+
+C. I'm sorry, I can't
+
+D. No way
+
+Jawaban: A (Menjawab "Not at all" pada pertanyaan "Would you mind..." berarti kamu tidak keberatan dan bersedia membantu).
+
+6. Which of the following is an expression of ACCEPTING an offer of help?
+
+A. That would be very kind of you, thanks.
+
+B. Let me help you with that.
+
+C. I can do it myself, thanks.
+
+D. Could you help me, please?
+
+Jawaban: A (Ekspresi ini menunjukkan penerimaan bantuan dengan rasa terima kasih).
+
+7. "_____ I get you something to drink?"
+
+A. Would
+
+B. Can
+
+C. Do
+
+D. Have
+
+Jawaban: B ("Can I get you..." atau "May I get you..." adalah awalan umum untuk menawarkan sesuatu).
+
+🗺️ Bagian 2: Asking and Giving Direction (Meminta & Memberi Arah)
+8. You are lost in a new city and want to find the nearest train station. What should you say?
+
+A. Where do I live?
+
+B. Excuse me, could you tell me the way to the nearest train station?
+
+C. I want to go to the train station now!
+
+D. Do you know me?
+
+Jawaban: B (Cara paling sopan untuk bertanya arah jalan kepada orang asing).
+
+9. "Go straight along this street, and then _____ right at the second traffic light."
+
+A. jump
+
+B. walk
+
+C. turn
+
+D. stop
+
+Jawaban: C ("Turn right/left" adalah frasa mutlak dalam memberikan arah belokan).
+
+10. A: "Excuse me, is there a pharmacy near here?"
+B: "Yes, there's one _____ the hospital and the supermarket."
+
+A. inside
+
+B. between
+
+C. above
+
+D. on
+
+Jawaban: B (Digunakan ketika suatu tempat berada di tengah-tengah dua lokasi lain).
+
+11. Which phrase is used to give a direction?
+
+A. How do I get to the museum?
+
+B. It's on your left, just past the post office.
+
+C. Can you show me the map?
+
+D. I'm looking for the bank.
+
+Jawaban: B (Memberikan instruksi letak suatu tempat).
+
+12. "The bookstore is _____ from the coffee shop."
+
+A. behind
+
+B. next to
+
+C. across
+
+D. under
+
+Jawaban: C (Kata "from" biasanya berpasangan dengan "across", yang berarti di seberang).
+
+13. If someone asks: "How long does it take to walk to the park?", the correct response is...
+
+A. It takes about 10 minutes.
+
+B. It is very beautiful.
+
+C. You should turn left.
+
+D. I like walking.
+
+Jawaban: A (Menjawab estimasi waktu perjalanan).
+
+14. A: "Could you point me to the nearest ATM?"
+B: "Sure. Go straight, walk _____ the bridge, and it will be on your right."
+
+A. over
+
+B. between
+
+C. in
+
+D. at
+
+Jawaban: A (Preposisi "over" digunakan untuk mendeskripsikan pergerakan melintasi jembatan).
+
+15. "You can't miss it." What does this idiom mean when giving directions?
+
+A. You are definitely going to be lost.
+
+B. The place is very easy to find and obvious.
+
+C. You missed the building.
+
+D. You shouldn't go there.
+
+Jawaban: B (Idiom umum yang berarti tempatnya sangat mencolok sehingga tidak mungkin terlewatkan).
+
+Apakah kamu ingin aku langsung memasukkan soal-soal ini ke dalam struktur kode HTML lengkap dengan fitur Global Leaderboard (Spreadsheet) seperti yang kita buat sebelumnya?
+
+apologizing and forgiving
+
+Tentu saja! Mari kita lanjutkan dengan topik Apologizing and Forgiving (Meminta Maaf dan Memaafkan). Ini adalah materi yang sangat bagus karena mengajarkan kesopanan dan empati dalam bahasa Inggris.
+
+Berikut adalah draf 15 soal pilihan ganda yang dirancang dari tingkat dasar hingga menengah, lengkap dengan kunci jawaban dan penjelasannya:
+
+🙏 Apologizing and Forgiving (Meminta Maaf & Memaafkan)
+1. "I am so sorry for arriving late." What is the best response to forgive?
+
+A. You are late!
+
+B. Never mind. It's okay.
+
+C. Thank you.
+
+D. You're welcome.
+
+Jawaban: B (Frasa "Never mind" atau "It's okay" adalah cara umum untuk menerima permintaan maaf).
+
+2. "Please forgive me for breaking your favourite mug." This is an expression of...
+
+A. Thanking
+
+B. Greeting
+
+C. Apologizing
+
+D. Asking for help
+
+Jawaban: C (Kalimat tersebut secara jelas meminta pengampunan/maaf atas sebuah kesalahan).
+
+3. A: "Ouch! You stepped on my foot!"
+B: "Oh, _____. I didn't see you there."
+
+A. I don't care
+
+B. Excuse me
+
+C. Thank you
+
+D. I am so sorry
+
+Jawaban: D (Respons yang tepat saat tidak sengaja menyakiti seseorang adalah meminta maaf).
+
+4. A: "I apologize for the delay in sending the report."
+B: "_____. Please send it as soon as possible."
+
+A. Don't worry about it
+
+B. I agree
+
+C. I am sorry too
+
+D. No way
+
+Jawaban: A ("Don't worry about it" adalah cara profesional dan sopan untuk memaafkan kesalahan kecil).
+
+5. Which expression shows a very strong and deep apology?
+
+A. Sorry.
+
+B. Oops, sorry.
+
+C. I am extremely sorry for my terrible mistake.
+
+D. My bad.
+
+Jawaban: C (Penggunaan kata "extremely" dan "terrible" menunjukkan penyesalan yang sangat dalam).
+
+6. The phrase "My bad" is a casual way of saying...
+
+A. I am angry.
+
+B. You are bad.
+
+C. I don't know.
+
+D. I am sorry / It's my fault.
+
+Jawaban: D ("My bad" adalah slang/idiom kasual yang sering dipakai anak muda untuk mengakui kesalahan ringan).
+
+7. Which of the following is an expression of ACCEPTING an apology?
+
+A. Please forgive me.
+
+B. It's totally fine.
+
+C. I apologize.
+
+D. You should be sorry.
+
+Jawaban: B ("It's totally fine" menunjukkan bahwa kamu sudah tidak mempermasalahkan hal tersebut).
+
+8. You accidentally spilled water on your friend's book. What should you say?
+
+A. Wow, your book is wet.
+
+B. You should move your book.
+
+C. Oops, my bad. Let me dry it. I'm really sorry!
+
+D. Never mind.
+
+Jawaban: C (Meminta maaf sekaligus menawarkan solusi untuk memperbaiki kesalahan).
+
+9. A: "I am sorry I lied to you."
+B: "_____. I need some time alone."
+
+A. That's okay
+
+B. Don't worry about it
+
+C. I can't forgive you right now
+
+D. No problem
+
+Jawaban: C (Karena B butuh waktu sendiri, artinya ia belum bisa menerima permintaan maaf tersebut).
+
+10. "Pardon me" is typically used when...
+
+A. You want to give someone a gift.
+
+B. You are saying goodbye.
+
+C. You agree with someone.
+
+D. You didn't hear what someone said or made a small social mistake.
+
+Jawaban: D ("Pardon me" sering digunakan untuk meminta orang mengulangi ucapannya atau saat bersendawa/bersin).
+
+11. In a formal business email, which phrase is best to express an apology?
+
+A. Sorry about that.
+
+B. We sincerely apologize for the inconvenience.
+
+C. Oops, our mistake.
+
+D. My bad.
+
+Jawaban: B (Penggunaan "sincerely apologize" sangat profesional dan formal).
+
+12. You need to ask your teacher a question, but she is talking to another student. You say:
+
+A. Sorry to interrupt, but...
+
+B. Forgive my sins...
+
+C. I am sorry for everything...
+
+D. Don't worry...
+
+Jawaban: A ("Sorry to interrupt" adalah ungkapan standar untuk menyela pembicaraan orang lain dengan sopan).
+
+13. A: "You should _____ an apology to her for being rude yesterday."
+B: "You're right, I will text her."
+
+A. do
+
+B. make
+
+C. have
+
+D. take
+
+Jawaban: B (Dalam bahasa Inggris, kolokasi yang tepat untuk kata apology adalah "make an apology" atau "give an apology").
+
+14. A: "I am so sorry I forgot your birthday!"
+B: "_____. We can celebrate it today!"
+
+A. Forget it, I'm mad.
+
+B. You are a bad friend.
+
+C. It's not a big deal.
+
+D. I am sorry too.
+
+Jawaban: C ("It's not a big deal" berarti "bukan masalah besar", menunjukkan orang tersebut memaafkan dengan tulus).
+
+15. The idiom "Let bygones be bygones" means...
+
+A. Let's forget about past disagreements and forgive each other.
+
+B. Let's say sorry again.
+
+C. Let's remember the mistake forever.
+
+D. Let's buy something new.
+
+Jawaban: A (Idiom ini bermakna "yang lalu biarlah berlalu", digunakan saat kedua pihak sepakat untuk saling memaafkan dan melupakan masalah).
+
+Apakah kamu ingin aku langsung membuatkan kode HTML/JavaScript untuk kuis ini lengkap dengan fitur Global Leaderboard (seperti kuis-kuis sebelumnya) supaya bisa langsung kamu sambungkan ke Google Sheets? Jika iya, apa quizType dan nama Tab Spreadsheet yang ingin kamu gunakan untuk materi ini?
+
+dengan level untuk beginner dan intermediate
+
+Pilihan yang sangat tepat! Membagi kuis menjadi level Beginner (Pemula) dan Intermediate (Menengah) akan membuat tugasmu terlihat sangat profesional dan terstruktur.
+
+Aku sudah merangkum ketiga materi yang kamu butuhkan: Asking & Offering Help, Asking & Giving Direction, serta Apologizing & Forgiving.
+
+Berikut adalah masing-masing 15 Soal Pilihan Ganda yang sudah dipisah berdasarkan tingkat kesulitannya:
+
+🌱 LEVEL 1: BEGINNER (Tingkat Dasar)
+Soal-soal ini menggunakan kosakata sederhana dan percakapan sehari-hari yang sangat dasar.
+
+1. A: "The box is very heavy." B: "Let me _____ you."
+
+A. ignore
+
+B. help
+
+C. hit
+
+D. push
+
+Jawaban: B (Let me help you = Biarkan saya membantumu).
+
+2. "Can you help me?" is an expression of...
+
+A. offering help
+
+B. asking for help
+
+C. apologizing
+
+D. thanking
+
+Jawaban: B (Asking for help = Meminta bantuan).
+
+3. A: "Do you need some help?" B: "_____, I can do it myself."
+
+A. Yes, please
+
+B. No, thank you
+
+C. You're welcome
+
+D. I am sorry
+
+Jawaban: B (Menolak bantuan karena bisa melakukannya sendiri).
+
+4. "_____ is the hospital?" "It is on Jalan Sudirman."
+
+A. What
+
+B. Who
+
+C. Where
+
+D. When
+
+Jawaban: C (Where = Di mana, digunakan untuk menanyakan arah/lokasi).
+
+5. To tell someone to walk straight ahead, we say...
+
+A. Turn right
+
+B. Go straight
+
+C. Turn left
+
+D. Stop here
+
+Jawaban: B (Go straight = Jalan lurus).
+
+6. The bank is _____ to the post office.
+
+A. next
+
+B. under
+
+C. behind
+
+D. between
+
+Jawaban: A (Next to = Di sebelah).
+
+7. "Turn left" in Indonesian means...
+
+A. Belok kanan
+
+B. Belok kiri
+
+C. Jalan terus
+
+D. Berhenti
+
+Jawaban: B (Turn left = Belok kiri).
+
+8. "I am _____ for breaking your glass."
+
+A. happy
+
+B. sorry
+
+C. thank you
+
+D. good
+
+Jawaban: B (I am sorry = Saya minta maaf).
+
+9. A: "I am sorry I am late." B: "_____"
+
+A. It's okay
+
+B. You're welcome
+
+C. Thank you
+
+D. Good morning
+
+Jawaban: A (It's okay = Tidak apa-apa, digunakan untuk memaafkan).
+
+10. When you make a mistake, you should say...
+
+A. Thank you
+
+B. I am sorry
+
+C. Excuse me
+
+D. Goodbye
+
+Jawaban: B (Jika berbuat salah, kita harus meminta maaf).
+
+11. A: "Sorry I lost your pen." B: "No _____, I have another one."
+
+A. problem
+
+B. thank you
+
+C. good
+
+D. sorry
+
+Jawaban: A (No problem = Tidak masalah).
+
+12. "Forgive me" means...
+
+A. Maafkan saya
+
+B. Tolong saya
+
+C. Terima kasih
+
+D. Permisi
+
+Jawaban: A (Forgive me = Maafkan saya).
+
+13. Which one is offering help?
+
+A. Can you help me?
+
+B. May I help you?
+
+C. Where is the bank?
+
+D. I am sorry.
+
+Jawaban: B (May I help you? = Bolehkah saya membantumu? adalah tawaran).
+
+14. A: "Can I help you carry the books?" B: "Yes, _____"
+
+A. please
+
+B. no
+
+C. sorry
+
+D. thanks anyway
+
+Jawaban: A (Yes, please = Ya, tolong, untuk menerima bantuan).
+
+15. A: "Excuse me, _____ is the toilet?"
+
+A. where
+
+B. what
+
+C. why
+
+D. who
+
+Jawaban: A (Where = Di mana).
+
+🚀 LEVEL 2: INTERMEDIATE (Tingkat Menengah)
+Soal-soal ini menggunakan idiom, frasa formal/profesional, dan situasi yang lebih kompleks.
+
+1. "Would you mind giving me a hand?" The phrase "giving me a hand" means...
+
+A. clapping hands
+
+B. helping me
+
+C. shaking hands
+
+D. pointing a direction
+
+Jawaban: B (Idiom "give a hand" artinya memberikan bantuan).
+
+2. A: "I'm having trouble with this software." B: "_____"
+
+A. I don't know.
+
+B. Would you like me to take a look?
+
+C. You should help me.
+
+D. What a pity.
+
+Jawaban: B (Menawarkan bantuan secara spesifik pada masalah yang dihadapi).
+
+3. Which is the most polite way to refuse an offer of help?
+
+A. I appreciate the offer, but I can manage.
+
+B. No, leave me alone.
+
+C. I don't need your help.
+
+D. Yes, do it for me.
+
+Jawaban: A (Menghargai tawaran terlebih dahulu sebelum menolak dengan sopan).
+
+4. "Could you _____ me the way to the nearest train station?"
+
+A. speak
+
+B. tell
+
+C. talk
+
+D. say
+
+Jawaban: B (Kolokasi yang tepat untuk menanyakan arah adalah "tell me the way").
+
+5. "Walk past the intersection and take the second turning on your right." "Intersection" means...
+
+A. Jembatan
+
+B. Persimpangan jalan
+
+C. Jalan buntu
+
+D. Terowongan
+
+Jawaban: B (Intersection = Persimpangan/perempatan jalan).
+
+6. The pharmacy is located _____ the bakery and the bookstore.
+
+A. among
+
+B. between
+
+C. opposite
+
+D. across
+
+Jawaban: B (Between digunakan ketika suatu tempat berada di tengah-tengah dua tempat lain).
+
+7. "I sincerely apologize for the inconvenience caused." This sentence is suitable for...
+
+A. chatting with a best friend
+
+B. a formal business email
+
+C. talking to a sibling
+
+D. buying food
+
+Jawaban: B (Ini adalah bahasa korespondensi bisnis yang sangat formal).
+
+8. A: "I forgot to bring your book, I'll bring it tomorrow." B: "_____. I don't need it today anyway."
+
+A. It's unforgivable
+
+B. Don't worry about it
+
+C. You must be sorry
+
+D. Shame on you
+
+Jawaban: B ("Don't worry about it" adalah cara santai namun sopan untuk memaafkan).
+
+9. The phrase "My bad" is a casual expression used to...
+
+A. blame someone else
+
+B. admit a small mistake and apologize
+
+C. ask for a direction
+
+D. offer assistance
+
+Jawaban: B ("My bad" adalah bahasa gaul/casual untuk mengakui kesalahan kecil).
+
+10. Which expression is used to interrupt someone politely to ask a direction?
+
+A. Sorry for your loss
+
+B. I apologize for my behavior
+
+C. Sorry to bother you, but...
+
+D. Forgive me for my sins
+
+Jawaban: C ("Sorry to bother you" digunakan untuk menyela dengan sopan).
+
+11. "I'd be glad to help." This is an expression of...
+
+A. Accepting help
+
+B. Offering help
+
+C. Refusing help
+
+D. Asking for help
+
+Jawaban: B (Menyatakan kesediaan dengan senang hati untuk membantu).
+
+12. If a place is "across from" the hospital, it means...
+
+A. Di sebelah RS
+
+B. Di belakang RS
+
+C. Di seberang RS
+
+D. Di dalam RS
+
+Jawaban: C (Across from = Berseberangan dengan).
+
+13. A: "I’m terribly sorry for stepping on your foot." B: "_____"
+
+A. You're welcome
+
+B. That's quite alright
+
+C. I am sorry too
+
+D. Don't mention it
+
+Jawaban: B ("That's quite alright" adalah frasa formal/sopan untuk menerima permintaan maaf).
+
+14. Which situation requires you to say "Pardon me"?
+
+A. You want to offer help to carry a bag.
+
+B. You didn't hear what someone just said.
+
+C. You know the direction to the mall.
+
+D. You are accepting an apology.
+
+Jawaban: B ("Pardon me" sering dipakai ketika kita kurang jelas mendengar ucapan seseorang dan memintanya mengulang).
+
+15. A: "_____?" B: "Sure, go straight and turn left."
+
+A. Can you help me lift this?
+
+B. Could you point me to the restroom?
+
+C. I apologize for being late.
+
+D. Would you like some help?
+
+Jawaban: B (Respons B adalah memberikan arah, jadi pertanyaan A pasti meminta arah ke suatu tempat).
+
+Langkah Selanjutnya:
+Apakah kamu ingin aku menggabungkan soal-soal ini ke dalam bentuk Code Kuis HTML (seperti yang ada di Global Leaderboard sebelumnya)?
+
+Jika iya, apakah kamu ingin dibuatkan dua file kuis terpisah (Satu untuk Beginner, satu untuk Intermediate) dengan Tab Spreadsheet yang berbeda juga? Beri tahu aku ya!
+
+nah yang aku ingin kamu lakukan dari ketiga materi tersebut tolong buatkan aku quiz dan code untuk kedua lvl tersebut dengan code seperti diata namun ganti soal dan kunci jawaban nya berikan padaku dalam bentuk file txt
+
+Tentu saja! Saya sudah membuatkan kode HTML lengkap untuk kedua level (Beginner dan Intermediate) sesuai dengan template yang memiliki fitur Global Leaderboard dan efek suara.
+
+Masing-masing kuis berisi 15 soal gabungan dari tiga materi (Asking/Offering Help, Asking/Giving Direction, Apologizing/Forgiving), lengkap dengan kunci jawaban dan penjelasannya.
+
+Penting untuk Pengaturan Spreadsheet:
+Di dalam kode, saya sudah mengatur identitas quizType yang berbeda agar datanya tidak tertukar di Google Sheets:
+
+Untuk Beginner: quizType = "beginner_quiz"
+
+Untuk Intermediate: quizType = "intermediate_quiz"
+
+Pastikan kamu menambahkan logika di Google Apps Script milikmu agar mengarahkan nama quizType tersebut ke nama tab Spreadsheet yang kamu inginkan (misal: tab "Beginner Quiz" dan tab "Intermediate Quiz").
+
+Berikut adalah file TXT yang berisi kode lengkap untuk masing-masing kuis yang bisa langsung kamu unduh:
+
+Your TXT file is ready
+Ikon TXT
+Beginner_Quiz_Code
+ TXT 
+Buka
+ (Kode untuk Level Beginner)
+
+Your TXT file is ready
+Ikon TXT
+Intermediate_Quiz_Code
+ TXT 
+Buka
+ (Kode untuk Level Intermediate)
+
+Kamu tinggal mengunduh file .txt tersebut, menyalin isinya, lalu mengubah ekstensinya menjadi .html saat kamu menyimpannya. Silakan dicoba!
+
+pisahkan masing2 materi dan levelnya
+
+Baik, saya sudah memisahkan ketiga materi tersebut (Asking & Offering Help, Asking & Giving Direction, dan Apologizing & Forgiving) dan membaginya dengan rapi menjadi level Beginner dan Intermediate.
+Ikon TXT
+6_Apology_Intermediate_Quiz
+ TXT 
+Buka
+Ikon TXT
+6_Apology_Intermediate_Quiz
+ TXT 
+Buka
+Ikon TXT
+5_Apology_Beginner_Quiz
+ TXT 
+Buka
+Ikon TXT
+5_Apology_Beginner_Quiz
+ TXT 
+Buka
+Ikon TXT
+4_Direction_Intermediate_Quiz
+ TXT 
+Buka
+Ikon TXT
+4_Direction_Intermediate_Quiz
+ TXT 
+Buka
+Ikon TXT
+3_Direction_Beginner_Quiz
+ TXT 
+Buka
+Ikon TXT
+3_Direction_Beginner_Quiz
+ TXT 
+Buka
+Ikon TXT
+2_Help_Intermediate_Quiz
+ TXT 
+Buka
+Ikon TXT
+2_Help_Intermediate_Quiz
+ TXT 
+Buka
+Ikon TXT
+1_Help_Beginner_Quiz
+ TXT 
+Buka
+Ikon TXT
+1_Help_Beginner_Quiz
+ TXT 
+Buka
+
+Masing-masing file sudah berisi 10 soal pilihan ganda, kunci jawaban, penjelasan pop-up, dan kode HTML/JavaScript lengkap yang terhubung ke Google Spreadsheet milikmu.
+
+Berikut adalah 6 file TXT kode kuis yang bisa langsung kamu unduh:
+
+1. Asking & Offering Help
+
+ (Level Beginner)
+
+ (Level Intermediate)
+
+2. Asking & Giving Direction
+
+ (Level Beginner)
+
+ (Level Intermediate)
+
+3. Apologizing & Forgiving
+
+ (Level Beginner)
+
+ (Level Intermediate)
+
+⚠️ Catatan Penting untuk Google Spreadsheet:
+Agar setiap kuis mengirim skornya ke halaman (Tab) Excel yang benar dan tidak tercampur, saya telah memasukkan tag quizType yang berbeda-beda di setiap kode HTML.
+
+Pastikan kamu menambahkan logika di Google Apps Script agar mengarahkan quizType ini ke nama tab yang kamu buat di Google Sheets. Tag yang saya gunakan di dalam kode adalah:
+
+help_beginner
+
+help_intermediate
+
+direction_beginner
+
+direction_intermediate
+
+apology_beginner
+
+apology_intermediate
+
+Silakan unduh file TXT di atas, salin kodenya, dan simpan dengan akhiran .html (contoh: help_beginner.html). Selamat mencoba!
+
+
+
+
+Gemini adalah AI dan dapat melakukan kesalahan.
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Asking & Offering Help - Beginner</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    font-family:'Poppins', sans-serif;
+    margin:0;
+    background: linear-gradient(135deg,#74ebd5,#9face6);
+}
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+}
+
+h1{text-align:center;}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:5px 0 10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+/* QUESTION STYLE */
+.question{
+    background:#f8f9ff;
+    padding:15px;
+    margin-bottom:15px;
+    border-left:6px solid #6c63ff;
+    border-radius:10px;
+}
+
+/* CLICKABLE OPTIONS */
+.option{
+    display:block;
+    padding:10px;
+    margin:6px 0;
+    border:2px solid #ddd;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.2s;
+    background:white;
+}
+
+.option:hover{
+    border-color:#6c63ff;
+    transform:scale(1.02);
+}
+
+.option.selected{
+    background:#6c63ff;
+    color:white;
+    border-color:#6c63ff;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#6c63ff;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* RESULT */
+.result{
+    margin-top:15px;
+    padding:15px;
+    background:#eaffea;
+    border-left:6px solid #2ecc71;
+    border-radius:10px;
+}
+
+/* POPUP */
+#popup{
+    display:none;
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-content{
+    background:white;
+    padding:20px;
+    width:85%;
+    max-width:650px;
+    border-radius:12px;
+    max-height:80%;
+    overflow-y:auto;
+}
+
+.close-btn{
+    background:red;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    float:right;
+    border-radius:8px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌟 Asking & Offering Help - Beginner</h1>
+<p style="text-align:center;">Topic: Asking and Offering Help</p>
+
+<input id="name" placeholder="Name">
+<input id="class" placeholder="Class">
+
+<!-- QUESTIONS -->
+<div class="question">
+1. A: 'The box is very heavy.' B: 'Let me _____ you.'
+<div class="option" onclick="selectAnswer('q1','a',this)">A. ignore</div>
+<div class="option" onclick="selectAnswer('q1','b',this)">B. help</div>
+<div class="option" onclick="selectAnswer('q1','c',this)">C. hit</div>
+<div class="option" onclick="selectAnswer('q1','d',this)">D. push</div>
+</div>
+
+<div class="question">
+2. 'Can you help me?' is an expression of...
+<div class="option" onclick="selectAnswer('q2','a',this)">A. offering help</div>
+<div class="option" onclick="selectAnswer('q2','b',this)">B. asking for help</div>
+<div class="option" onclick="selectAnswer('q2','c',this)">C. apologizing</div>
+<div class="option" onclick="selectAnswer('q2','d',this)">D. thanking</div>
+</div>
+
+<div class="question">
+3. A: 'Do you need some help?' B: '_____, I can do it myself.'
+<div class="option" onclick="selectAnswer('q3','a',this)">A. Yes, please</div>
+<div class="option" onclick="selectAnswer('q3','b',this)">B. No, thank you</div>
+<div class="option" onclick="selectAnswer('q3','c',this)">C. You're welcome</div>
+<div class="option" onclick="selectAnswer('q3','d',this)">D. I am sorry</div>
+</div>
+
+<div class="question">
+4. Which one is offering help?
+<div class="option" onclick="selectAnswer('q4','a',this)">A. Can you help me?</div>
+<div class="option" onclick="selectAnswer('q4','b',this)">B. May I help you?</div>
+<div class="option" onclick="selectAnswer('q4','c',this)">C. Where is the bank?</div>
+<div class="option" onclick="selectAnswer('q4','d',this)">D. I am sorry.</div>
+</div>
+
+<div class="question">
+5. A: 'Can I help you carry the books?' B: 'Yes, _____'
+<div class="option" onclick="selectAnswer('q5','a',this)">A. please</div>
+<div class="option" onclick="selectAnswer('q5','b',this)">B. no</div>
+<div class="option" onclick="selectAnswer('q5','c',this)">C. sorry</div>
+<div class="option" onclick="selectAnswer('q5','d',this)">D. thanks anyway</div>
+</div>
+
+<div class="question">
+6. 'May I help you?' means...
+<div class="option" onclick="selectAnswer('q6','a',this)">A. Maafkan saya</div>
+<div class="option" onclick="selectAnswer('q6','b',this)">B. Bolehkah saya membantumu?</div>
+<div class="option" onclick="selectAnswer('q6','c',this)">C. Di mana rumahmu?</div>
+<div class="option" onclick="selectAnswer('q6','d',this)">D. Terima kasih</div>
+</div>
+
+<div class="question">
+7. A: 'I can't open this door.' B: '_____' 
+<div class="option" onclick="selectAnswer('q7','a',this)">A. Let me help you</div>
+<div class="option" onclick="selectAnswer('q7','b',this)">B. Go away</div>
+<div class="option" onclick="selectAnswer('q7','c',this)">C. Thank you</div>
+<div class="option" onclick="selectAnswer('q7','d',this)">D. I am busy</div>
+</div>
+
+<div class="question">
+8. You need help to lift a table. You say:
+<div class="option" onclick="selectAnswer('q8','a',this)">A. Can you help me?</div>
+<div class="option" onclick="selectAnswer('q8','b',this)">B. No problem</div>
+<div class="option" onclick="selectAnswer('q8','c',this)">C. I don't need help</div>
+<div class="option" onclick="selectAnswer('q8','d',this)">D. I am sorry</div>
+</div>
+
+<div class="question">
+9. 'No, thanks.' is an expression to...
+<div class="option" onclick="selectAnswer('q9','a',this)">A. Ask for help</div>
+<div class="option" onclick="selectAnswer('q9','b',this)">B. Offer help</div>
+<div class="option" onclick="selectAnswer('q9','c',this)">C. Refuse help</div>
+<div class="option" onclick="selectAnswer('q9','d',this)">D. Accept help</div>
+</div>
+
+<div class="question">
+10. A: 'Can you pass the salt?' B: '_____' 
+<div class="option" onclick="selectAnswer('q10','a',this)">A. Yes, here it is</div>
+<div class="option" onclick="selectAnswer('q10','b',this)">B. No, I am full</div>
+<div class="option" onclick="selectAnswer('q10','c',this)">C. Good morning</div>
+<div class="option" onclick="selectAnswer('q10','d',this)">D. See you</div>
+</div>
+
+
+
+<button onclick="submitQuiz()">Submit Quiz</button>
+
+<div class="result" id="result"></div>
+
+<h2>🏆 Global Online Leaderboard</h2>
+<table border="1" width="100%">
+<tr>
+<th>Rank</th>
+<th>Name</th>
+<th>Class</th>
+<th>Score</th>
+<th>Time</th>
+</tr>
+<tbody id="ranking">
+<tr><td colspan='5' style='text-align:center;'>Loading Leaderboard... 🌍</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<!-- POPUP -->
+<div id="popup">
+<div class="popup-content">
+<button class="close-btn" onclick="closePopup()">X</button>
+<h2>📘 Explanations</h2>
+<div id="explanations"></div>
+</div>
+</div>
+
+<script>
+
+// ANSWERS
+const answers = {
+q1:"b", q2:"b", q3:"b", q4:"b", q5:"a", q6:"b", q7:"a", q8:"a", q9:"c", q10:"a"
+};
+
+// EXPLANATIONS
+const explanations = {
+q1:"Let me help you = Biarkan saya membantumu.",
+q2:"Asking for help = Meminta bantuan.",
+q3:"Menolak bantuan karena bisa melakukannya sendiri.",
+q4:"May I help you? = Bolehkah saya membantumu? (Tawaran).",
+q5:"Yes, please = Ya, tolong (Menerima bantuan).",
+q6:"May I help you adalah bentuk sopan untuk menawarkan bantuan.",
+q7:"B menawarkan bantuan untuk membukakan pintu.",
+q8:"Meminta bantuan kepada orang lain.",
+q9:"Digunakan untuk menolak tawaran bantuan secara sopan.",
+q10:"Memberikan bantuan sesuai permintaan."
+};
+
+// YOUR GOOGLE SHEETS SCRIPT URL
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxa7PgK5zJe0OegGhpNzr6wC6wgPMRLADYKasm5JIIyBcF7GzPe5jBxZmm9tKZtf9Q/exec";
+
+// SELECTED ANSWERS
+let selectedAnswers = {};
+
+function selectAnswer(q, ans, el){
+    selectedAnswers[q] = ans;
+    let options = el.parentNode.querySelectorAll(".option");
+    options.forEach(o => o.classList.remove("selected"));
+    el.classList.add("selected");
+}
+
+// SOUND
+const correctSound = new Audio("https://www.soundjay.com/buttons/sounds/button-4.mp3");
+const wrongSound = new Audio("https://www.soundjay.com/buttons/sounds/button-10.mp3");
+
+function submitQuiz(){
+    let name = document.getElementById("name").value;
+    let cls = document.getElementById("class").value;
+
+    if (!name || !cls) {
+        alert("Please fill in your Name and Class before submitting!");
+        return;
+    }
+
+    let score = 0;
+    let output = "";
+
+    for(let i=1;i<=10;i++){
+        if(selectedAnswers["q"+i] === answers["q"+i]){
+            score++;
+            correctSound.play();
+            output += `<p>✔ Q${i}: Correct - ${explanations["q"+i]}</p>`;
+        }else{
+            wrongSound.play();
+            output += `<p>❌ Q${i}: Wrong - ${explanations["q"+i]}</p>`;
+        }
+    }
+
+    let time = new Date().toLocaleString();
+
+    // UPDATE TAMPILAN RESULT
+    document.getElementById("result").innerHTML = `
+    <h3>🎯 Result</h3>
+    Name: ${name}<br>
+    Class: ${cls}<br>
+    Score: ${score}/10<br>
+    Time: ${time}<br>
+    <span id="save-status" style="color: #f39c12; font-weight: bold; margin-top:10px; display:inline-block;">🔄 Saving your score globally...</span>
+    `;
+
+    showPopup(output);
+
+    let dataToSave = {
+        quizType: "help_beginner", 
+        name: name,
+        class: cls,
+        score: score,
+        time: time
+    };
+
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "text/plain" 
+        },
+        body: JSON.stringify(dataToSave)
+    })
+    .then(response => response.json())
+    .then(data => {
+        let statusEl = document.getElementById("save-status");
+        if(data.result === "success") {
+            statusEl.innerHTML = "✔️ Score saved globally!";
+            statusEl.style.color = "#2ecc71";
+            loadRanking();
+        } else {
+            statusEl.innerHTML = "❌ Failed to save score.";
+            statusEl.style.color = "red";
+        }
+    })
+    .catch(error => {
+        let statusEl = document.getElementById("save-status");
+        statusEl.innerHTML = "❌ Error connecting to server.";
+        statusEl.style.color = "red";
+        console.error("Fetch error:", error);
+    });
+}
+
+// FETCH GLOBAL LEADERBOARD FROM GOOGLE SHEETS
+function loadRanking(){
+    let table = document.getElementById("ranking");
+    table.innerHTML = "<tr><td colspan='5' style='text-align:center;'>Loading Leaderboard... 🌍</td></tr>";
+
+    fetch(SCRIPT_URL + "?quizType=help_beginner")
+    .then(response => response.json())
+    .then(data => {
+        if(data.result === "success") {
+            table.innerHTML = "";
+            let ranking = data.data;
+            
+            if(ranking.length === 0) {
+                table.innerHTML = "<tr><td colspan='5' style='text-align:center;'>No scores yet. Be the first!</td></tr>";
+                return;
+            }
+
+            ranking.forEach((r,index)=>{
+                let badge = "";
+                if(index===0) badge="🥇 GOLD";
+                else if(index===1) badge="🥈 SILVER";
+                else if(index===2) badge="🥉 BRONZE";
+                else badge="—";
+
+                table.innerHTML += `
+                <tr>
+                <td>${badge}</td>
+                <td>${r.name}</td>
+                <td>${r.class}</td>
+                <td>${r.score}</td>
+                <td>${r.time}</td>
+                </tr>`;
+            });
+        } else {
+            table.innerHTML = "<tr><td colspan='5' style='text-align:center;color:red;'>Failed to load scores.</td></tr>";
+        }
+    })
+    .catch(error => {
+        table.innerHTML = "<tr><td colspan='5' style='text-align:center;color:red;'>Error fetching leaderboard.</td></tr>";
+        console.error("Leaderboard fetch error:", error);
+    });
+}
+
+function showPopup(html){
+    document.getElementById("explanations").innerHTML = html;
+    document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup(){
+    document.getElementById("popup").style.display = "none";
+}
+
+loadRanking();
+
+</script>
+
+</body>
+</html>
+1_Help_Beginner_Quiz.txt
+Menampilkan 1_Help_Beginner_Quiz.txt.
